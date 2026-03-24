@@ -780,14 +780,13 @@ Scroll To Top style
 
 .page-social-icon-box {
   position: fixed;
-  top: 50%;
-  left: 110px;
-  transform: translateY(-50%);
+  bottom: 110px;
+  right: 40px;
   z-index: 999;
 }
 @media only screen and (max-width: 1699px) {
   .page-social-icon-box {
-    left: 50px;
+    right: 40px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -6143,8 +6142,8 @@ Scroll To Top style
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6180,8 +6179,10 @@ Scroll To Top style
 }
 .faq-section .image-column .inner-column .image.two {
   position: absolute;
-  bottom: -10px;
+  bottom: -60px;
   right: 20px;
+  width: auto;
+  max-width: 65%;
 }
 .faq-section .image-column .inner-column .image.two img {
   border: 7px solid var(--theme-color-light);
@@ -6193,7 +6194,16 @@ Scroll To Top style
 }
 @media (max-width: 1399.98px) {
   .faq-section .image-column .inner-column .image.two {
-    display: none;
+    right: 0px;
+    bottom: -40px;
+    max-width: 70%;
+  }
+}
+@media (max-width: 767.98px) {
+  .faq-section .image-column .inner-column .image.two {
+    right: -10px;
+    bottom: -30px;
+    max-width: 80%;
   }
 }
 .rtl .faq-section .image-column .inner-column .image.two {
@@ -8276,16 +8286,16 @@ Scroll To Top style
 }
 .gallery-section-two .title-box {
   position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 @media (max-width: 1199.98px) {
   .gallery-section-two .title-box {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 991.98px) {
   .gallery-section-two .title-box {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .gallery-section-two .title-box br {
     display: none;
