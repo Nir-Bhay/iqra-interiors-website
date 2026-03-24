@@ -17,19 +17,23 @@
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
-        <link href="css/process-section.css" rel="stylesheet">
+    <link href="css/process-section.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <!--Color Switcher Mockup-->
     <link href="css/color-switcher-design.css" rel="stylesheet">
     <!-- Exhora Custom Overrides -->
     <style>
         /* Logo Size & Color Optimization */
-        .logo-box img, .nav-logo img, .logo img {
+        .logo-box img,
+        .nav-logo img,
+        .logo img {
             max-height: 70px !important;
             width: auto !important;
             object-fit: contain !important;
         }
-        .nav-logo.light img, .logo.light img {
+
+        .nav-logo.light img,
+        .logo.light img {
             filter: brightness(0) invert(1) !important;
         }
 
@@ -51,7 +55,7 @@
             max-width: 100%;
             height: auto;
             border: 8px solid #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         /* About Author Avatars: smaller */
@@ -75,14 +79,16 @@
         .client-block-two .inner-box {
             padding: 5px !important;
             margin: 0 !important;
-            transition: none !important; /* Force remove any existing transitions */
+            transition: none !important;
+            /* Force remove any existing transitions */
         }
 
         .client-block-two .inner-box .image {
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            height: 140px !important; /* Container height slightly larger than img */
+            height: 140px !important;
+            /* Container height slightly larger than img */
         }
 
         .client-block-two .inner-box .image img {
@@ -91,10 +97,14 @@
             width: auto !important;
             height: auto !important;
             object-fit: contain !important;
-            transform: none !important; /* Force remove any existing transforms */
-            transition: none !important; /* Force remove any existing transitions */
-            opacity: 1 !important; /* Force full opacity */
-            filter: none !important; /* Force remove any filters */
+            transform: none !important;
+            /* Force remove any existing transforms */
+            transition: none !important;
+            /* Force remove any existing transitions */
+            opacity: 1 !important;
+            /* Force full opacity */
+            filter: none !important;
+            /* Force remove any filters */
         }
 
         .client-block-two .inner-box:hover .image img {
@@ -172,13 +182,15 @@
             justify-content: center !important;
             align-items: center !important;
             text-align: center !important;
-            background: rgba(21, 0, 54, 0.9) !important; /* Rich dark overlay */
+            background: rgba(21, 0, 54, 0.9) !important;
+            /* Rich dark overlay */
             padding: 30px !important;
             transform: scale(0.95);
             transition: all 0.4s ease-in-out !important;
             opacity: 0 !important;
             visibility: hidden !important;
-            padding-left: 30px !important; /* Resetting bootstrap padding */
+            padding-left: 30px !important;
+            /* Resetting bootstrap padding */
             padding-bottom: 30px !important;
         }
 
@@ -198,7 +210,8 @@
         .speaker-block-two .step-label {
             font-size: 14px;
             font-weight: 700;
-            color: #ff007a; /* Exhora Pink */
+            color: #ff007a;
+            /* Exhora Pink */
             text-transform: uppercase;
             margin-bottom: 8px;
             letter-spacing: 2px;
@@ -219,7 +232,8 @@
 
         .speaker-block-two .inner-box .content .designation {
             font-size: 14px !important;
-            color: #ff9d00 !important; /* Exhora Orange */
+            color: #ff9d00 !important;
+            /* Exhora Orange */
             font-weight: 600 !important;
             margin-bottom: 15px !important;
             text-transform: uppercase;
@@ -234,21 +248,26 @@
         }
 
         /* Button Icon Visibility & Style */
-        .speakers-section-two .btn-box .icon {
-            display: inline-block !important;
-            font-size: 20px !important;
+        .btn-box .icon {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
             margin-right: 10px !important;
-            vertical-align: middle !important;
-            color: #fff !important;
+        }
+        .theme-btn.bg-pink .icon {
+            color: #ff007a !important;
+        }
+        .theme-btn.bg-orange .icon {
+            color: #ff9d00 !important;
         }
 
-        .speakers-section-two .btn-box .btn-title {
+        .btn-box .btn-title {
             vertical-align: middle !important;
         }
 
         /* Speaker Block Glow on Hover */
         .speaker-block-two .inner-box {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border-radius: 4px;
             overflow: hidden;
         }
@@ -263,6 +282,7 @@
             margin-top: 30px !important;
             margin-bottom: 30px !important;
         }
+
         .event-section-two .sec-title {
             margin-bottom: 20px !important;
         }
@@ -301,8 +321,10 @@
         }
 
         .exhora-scroll-track .gallery-card {
-            width: 320px; /* Increased from 220px */
-            height: 240px; /* Increased from 160px */
+            width: 320px;
+            /* Increased from 220px */
+            height: 240px;
+            /* Increased from 160px */
             border-radius: 12px;
             overflow: hidden;
             flex-shrink: 0;
@@ -331,25 +353,30 @@
 
         .exhora-infinite-gallery .row-2 .exhora-scroll-track {
             animation-direction: reverse;
-            animation-duration: 220s; /* Adjust speed for row 2 */
+            animation-duration: 220s;
+            /* Adjust speed for row 2 */
         }
 
         .exhora-infinite-gallery .row-3 .exhora-scroll-track {
-            animation-duration: 160s; /* Adjust speed for row 3 */
+            animation-duration: 160s;
+            /* Adjust speed for row 3 */
         }
 
         /* FAQ Section: Overlapping Image Layout */
         .faq-section .shape-twentythree,
         .faq-section .image-column .inner-column:before,
         .faq-section:before {
-            display: none !important; /* Remove orange/red background thoroughly */
+            display: none !important;
+            /* Remove orange/red background thoroughly */
             background: none !important;
         }
-        
+
         .faq-section .image-column {
             display: flex;
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            justify-content: center;
+            /* Center horizontally */
         }
 
         .faq-section .image-column .inner-column {
@@ -357,16 +384,20 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            padding: 40px 0; /* Add some breathing room */
+            padding: 40px 0;
+            /* Add some breathing room */
         }
 
         .faq-section .image-column .image {
             position: relative;
-            width: 95%; /* Increased main image size */
+            width: 95%;
+            /* Increased main image size */
             margin: 0;
-            z-index: 1; /* Move main image to back! */
-            border-radius: 15px; /* Rounded corners like reference */
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            z-index: 1;
+            /* Move main image to back! */
+            border-radius: 15px;
+            /* Rounded corners like reference */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
         }
 
         .faq-section .image-column .image img {
@@ -376,29 +407,115 @@
 
         .faq-section .image-column .image.two {
             position: absolute;
-            bottom: -50px; /* Bring it further down as requested */
-            right: -20px; /* Shift right to peek out */
-            width: 70%; /* Make second image larger */
+            bottom: -50px;
+            /* Bring it further down as requested */
+            right: -20px;
+            /* Shift right to peek out */
+            width: 70%;
+            /* Make second image larger */
             margin: 0;
-            z-index: 2; /* Moved SECOND image OVER the first image! */
-            border: none; /* Remove extra white bg/border */
-            border-radius: 15px; /* Apply same radius */
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            z-index: 2;
+            /* Moved SECOND image OVER the first image! */
+            border: none;
+            /* Remove extra white bg/border */
+            border-radius: 15px;
+            /* Apply same radius */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
 
         .faq-section .image-column .image.two img {
-            border-radius: 15px; /* Radius */
+            border-radius: 15px;
+            /* Radius */
             width: 100%;
         }
-        
+
         /* Circular Badge Positioning */
         .faq-section .image-column .inner-column .exp-box {
-            display: flex !important; /* Override the max-width:1699px display:none */
+            display: flex !important;
+            /* Override the max-width:1699px display:none */
             position: absolute;
-            top: -20px; /* Overlap on top right of main image */
+            top: -20px;
+            /* Overlap on top right of main image */
             right: -10px;
-            z-index: 3; /* Topmost */
-            transform: scale(0.85); /* Slightly scale down to fit nicely */
+            z-index: 3;
+            /* Topmost */
+            transform: scale(0.85);
+            /* Slightly scale down to fit nicely */
+        }
+
+        /* Mobile: Reduce size and boldness of About Us feature list */
+        @media only screen and (max-width: 767px) {
+            .about-section-two .feature-list-two li .title {
+                font-size: 16px !important;
+                font-weight: 500 !important;
+                line-height: 1.3 !important;
+            }
+        }
+
+        /* Mobile Menu & Hidden Bar Contact List Fixes */
+        .mobile-menu .contact-list-one li .title,
+        .hidden-bar .contact-list-one li .title {
+            font-size: 16px !important;
+            font-weight: 800 !important;
+            line-height: 1.2 !important;
+            margin-bottom: 5px !important;
+            color: #111 !important; 
+            display: block !important;
+            text-transform: uppercase !important;
+        }
+
+        .hidden-bar .contact-list-one li .title {
+            color: #fff !important;
+        }
+
+        .mobile-menu .contact-list-one li .text,
+        .mobile-menu .contact-list-one li .text a,
+        .hidden-bar .contact-list-one li .text,
+        .hidden-bar .contact-list-one li .text a {
+            font-size: 14px !important;
+            line-height: 1.4 !important;
+            font-weight: 400 !important;
+            color: #444 !important;
+        }
+
+        .hidden-bar .contact-list-one li .text,
+        .hidden-bar .contact-list-one li .text a {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .mobile-menu .contact-list-one li .icon,
+        .hidden-bar .contact-list-one li .icon {
+            font-size: 24px !important; /* Sufficiently large icon */
+            color: #ff007a !important; /* Exhora Pink */
+            margin-bottom: 8px !important;
+            display: inline-block !important;
+        }
+
+        /* Ensure icon doesn't overlap text awkwardly without absolute positioning */
+        .mobile-menu .contact-list-one li,
+        .hidden-bar .contact-list-one li {
+            position: relative;
+            padding-left: 45px !important;
+            margin-bottom: 25px !important;
+        }
+
+        .mobile-menu .contact-list-one li .icon,
+        .hidden-bar .contact-list-one li .icon {
+            position: absolute !important;
+            left: 0;
+            top: 5px;
+            margin-bottom: 0 !important;
+        }
+
+        /* Mobile Logo Responsive Optimization */
+        @media only screen and (max-width: 767px) {
+            .mobile-menu .logo-box img,
+            .nav-logo img,
+            .logo img,
+            .logo-box img {
+                max-height: 45px !important; /* Smaller logo for mobile headers and menus */
+                padding: 5px 0;
+            }
         }
     </style>
 
@@ -470,10 +587,10 @@
                                 </div>
 
                                 <!-- Hidden Bar -->
-                                <button class="ui-btn toggle-hidden-bar"><i class="icon flaticon-menu-2"></i></button>
+                                <button class="ui-btn toggle-hidden-bar"><i class="icon fa fa-bars"></i></button>
 
                                 <!-- Mobile Nav toggler -->
-                                <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                                <div class="mobile-nav-toggler"><span class="icon fa fa-bars"></span></div>
                             </div>
                         </div>
                     </div>
@@ -488,8 +605,8 @@
                 <nav class="menu-box">
                     <div class="upper-box">
                         <div class="logo-box">
-                            <div class="nav-logo light"><a href="index.html"><img src="images/logo.png"
-                                        alt="Logo"></a></div>
+                            <div class="nav-logo light"><a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+                            </div>
                             <div class="nav-logo dark"><a href="index.html"><img src="images/logo.png" alt="Logo"></a>
                             </div>
                         </div>
@@ -501,17 +618,17 @@
                     </ul>
                     <ul class="contact-list-one">
                         <li>
-                            <i class="icon lnr-icon-phone-handset"></i>
+                            <i class="icon fas fa-phone-alt"></i>
                             <span class="title">Call Now</span>
                             <div class="text"><a href="tel:+919311257132">+91 9311257132</a></div>
                         </li>
                         <li>
-                            <i class="icon lnr-icon-envelope1"></i>
+                            <i class="icon fas fa-envelope"></i>
                             <span class="title">Send Email</span>
                             <div class="text"><a href="mailto:info@exoraambiance.com">info@exoraambiance.com</a></div>
                         </li>
                         <li>
-                            <i class="icon lnr-icon-map-marker"></i>
+                            <i class="icon fas fa-map-marker-alt"></i>
                             <span class="title">Address</span>
                             <div class="text">Omega 1, NRI City, Greater Noida, UP 201310</div>
                         </li>
@@ -567,7 +684,7 @@
                             </nav><!-- Main Menu End-->
 
                             <!--Mobile Navigation Toggler-->
-                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                            <div class="mobile-nav-toggler"><span class="icon fa fa-bars"></span></div>
                         </div>
                     </div>
                 </div>
@@ -599,17 +716,17 @@
 
                 <ul class="contact-list-one">
                     <li>
-                        <i class="icon lnr-icon-phone-handset"></i>
+                        <i class="icon fas fa-phone-alt"></i>
                         <span class="title">Call Now</span>
                         <div class="text"><a href="tel:+919311257132">+91 9311257132</a></div>
                     </li>
                     <li>
-                        <i class="icon lnr-icon-envelope1"></i>
+                        <i class="icon fas fa-envelope"></i>
                         <span class="title">Send Email</span>
                         <div class="text"><a href="mailto:info@exoraambiance.com">info@exoraambiance.com</a></div>
                     </li>
                     <li>
-                        <i class="icon lnr-icon-map-marker"></i>
+                        <i class="icon fas fa-map-marker-alt"></i>
                         <span class="title">Address</span>
                         <div class="text">Omega 1, NRI City, Greater Noida, <br> Uttar Pradesh 201310</div>
                     </li>
@@ -637,10 +754,12 @@
                         <div class="icon-arrow wow zoomIn" data-wow-delay="4800ms"></div>
                         <div class="text wow fadeInUp" data-wow-delay="4500ms">Let's design a stall that attracts,
                             engages, and converts. Transforming ideas into iconic exhibition experiences.</div>
-                        <div class="btn-box wow fadeInUp" data-wow-delay="5000ms" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="btn-box wow fadeInUp" data-wow-delay="5000ms"
+                            style="display: flex; gap: 15px; flex-wrap: wrap;">
                             <a href="#contact" class="theme-btn btn-style-one bg-pink"><span class="btn-title">Get a
                                     Free Consultation</span></a>
-                            <a href="#gallery" class="theme-btn btn-style-one bg-orange"><span class="btn-title">Project Portfolio</span></a>
+                            <a href="#gallery" class="theme-btn btn-style-one bg-orange"><span class="btn-title">Project
+                                    Portfolio</span></a>
                         </div>
                     </div>
                 </div>
@@ -747,10 +866,10 @@
 
                             <div class="btn-box">
                                 <a href="#contact" class="theme-btn btn-style-one icon-btn bg-pink"><i
-                                        class="icon flaticon-tickets"></i><span class="btn-title">Get a Free
+                                        class="icon fas fa-phone-alt"></i><span class="btn-title">Get a Free
                                         Consultation</span></a>
                                 <a href="#gallery" class="theme-btn btn-style-one icon-btn bg-orange"><i
-                                        class="icon flaticon-placeholder"></i><span class="btn-title">View Our
+                                        class="icon fas fa-images"></i><span class="btn-title">View Our
                                         Work</span></a>
                             </div>
                         </div>
@@ -776,6 +895,52 @@
                         </div>
 
                         <!-- Time Counter -->
+                        <style>
+                            @media (max-width: 767px) {
+                                .countdown-section .time-countdown {
+                                    display: flex !important;
+                                    flex-direction: row !important;
+                                    justify-content: space-between !important;
+                                    align-items: center !important;
+                                    gap: 5px !important;
+                                    background: rgba(255,255,255,0.1);
+                                    border: 1px solid rgba(255,255,255,0.15);
+                                    border-radius: 12px;
+                                    padding: 15px 10px !important;
+                                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                                    width: 100%;
+                                }
+                                .countdown-section .time-countdown .counter-column {
+                                    display: flex !important;
+                                    flex-direction: column !important;
+                                    align-items: center !important;
+                                    justify-content: center !important;
+                                    width: auto !important;
+                                    padding: 0 !important;
+                                    background: transparent !important;
+                                    border: none !important;
+                                    box-shadow: none !important;
+                                    margin: 0 !important;
+                                }
+                                .countdown-section .time-countdown .counter-column .count {
+                                    font-size: 24px !important; 
+                                    line-height: 1 !important;
+                                    margin-bottom: 5px !important;
+                                }
+                                .countdown-section .time-countdown .counter-column .count::before,
+                                .countdown-section .time-countdown .separator {
+                                    content: none !important;
+                                    display: none !important;
+                                }
+                                .countdown-section .time-countdown .counter-column sub {
+                                    font-size: 10px !important;
+                                    font-weight: 600 !important;
+                                    text-transform: uppercase;
+                                    letter-spacing: 1px !important;
+                                    opacity: 0.9;
+                                }
+                            }
+                        </style>
                         <div class="timer-column col-xl-4 col-lg-12 col-md-12 col-sm-12 wow fadeInUp"
                             data-wow-delay="200ms">
                             <div class="time-counter">
@@ -808,7 +973,7 @@
                     <div class="feature-block-two has-active col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4 wow fadeInUp">
                         <div class="inner-box" style="background:#fff; border:1px solid #eee;">
                             <div class="icon-box">
-                                <i class="icon flaticon-computer"></i>
+                                <i class="icon fas fa-pencil-ruler"></i>
                                 <div class="icon-seven"></div>
                                 <div class="icon-eight"></div>
                             </div>
@@ -826,7 +991,7 @@
                     <div class="feature-block-two has-active col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4 wow fadeInUp">
                         <div class="inner-box" style="background:#fff; border:1px solid #eee;">
                             <div class="icon-box">
-                                <i class="icon flaticon-creativity"></i>
+                                <i class="icon fas fa-tools"></i>
                                 <div class="icon-seven"></div>
                                 <div class="icon-eight"></div>
                             </div>
@@ -844,7 +1009,7 @@
                     <div class="feature-block-two has-active col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4 wow fadeInUp">
                         <div class="inner-box" style="background:#fff; border:1px solid #eee;">
                             <div class="icon-box">
-                                <i class="icon flaticon-speech"></i>
+                                <i class="icon fas fa-key"></i>
                                 <div class="icon-seven"></div>
                                 <div class="icon-eight"></div>
                             </div>
@@ -863,7 +1028,7 @@
                         data-wow-delay="200ms">
                         <div class="inner-box" style="background:#fff; border:1px solid #eee;">
                             <div class="icon-box">
-                                <i class="icon flaticon-team"></i>
+                                <i class="icon fas fa-tasks"></i>
                                 <div class="icon-seven"></div>
                                 <div class="icon-eight"></div>
                             </div>
@@ -882,7 +1047,7 @@
                         data-wow-delay="200ms">
                         <div class="inner-box" style="background:#fff; border:1px solid #eee;">
                             <div class="icon-box">
-                                <i class="icon flaticon-speech"></i>
+                                <i class="icon fas fa-truck"></i>
                                 <div class="icon-seven"></div>
                                 <div class="icon-eight"></div>
                             </div>
@@ -901,7 +1066,7 @@
                         data-wow-delay="200ms">
                         <div class="inner-box" style="background:#fff; border:1px solid #eee;">
                             <div class="icon-box">
-                                <i class="icon flaticon-computer"></i>
+                                <i class="icon fas fa-lightbulb"></i>
                                 <div class="icon-seven"></div>
                                 <div class="icon-eight"></div>
                             </div>
@@ -944,7 +1109,8 @@
                                             <span class="step-label">Step 1</span>
                                             <h4 class="name"><a href="#contact">Concept & Design</a></h4>
                                             <span class="designation">3D Visualization & Planning</span>
-                                            <div class="description-text">Strategic planning and 3D visualization to perfect your vision before fabrication.</div>
+                                            <div class="description-text">Strategic planning and 3D visualization to
+                                                perfect your vision before fabrication.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -964,7 +1130,8 @@
                                             <span class="step-label">Step 2</span>
                                             <h4 class="name"><a href="#contact">Fabrication</a></h4>
                                             <span class="designation">In-House Production</span>
-                                            <div class="description-text">Quality-controlled in-house production using premium materials and expert craftsmanship.</div>
+                                            <div class="description-text">Quality-controlled in-house production using
+                                                premium materials and expert craftsmanship.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -984,7 +1151,8 @@
                                             <span class="step-label">Step 3</span>
                                             <h4 class="name"><a href="#contact">Installation</a></h4>
                                             <span class="designation">Professional Assembly</span>
-                                            <div class="description-text">Seamless on-site setup and turnkey handover, ensuring your brand stands out and shines.</div>
+                                            <div class="description-text">Seamless on-site setup and turnkey handover,
+                                                ensuring your brand stands out and shines.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1004,10 +1172,10 @@
 
                             <div class="btn-box">
                                 <a href="#contact" class="theme-btn btn-style-one icon-btn bg-pink"><i
-                                        class="icon flaticon-tickets"></i><span class="btn-title">Get a Free
+                                        class="icon fas fa-phone-alt"></i><span class="btn-title">Get a Free
                                         Consultation</span></a>
                                 <a href="#gallery" class="theme-btn btn-style-one icon-btn bg-orange"><i
-                                        class="icon flaticon-placeholder"></i><span class="btn-title">View Our
+                                        class="icon fas fa-images"></i><span class="btn-title">View Our
                                         Work</span></a>
                             </div>
                         </div>
@@ -1144,107 +1312,112 @@
                         exhibitions nationwide.</div>
                 </div>
 
-               
 
-                    <!-- Image Column -->
-                    <div class="tabs-content">
-                        <!--Tab-->
-                        <div class="tab active-tab" id="tab1">
-                            <div class="outer-box">
 
-                                <!-- Event Block 1 -->
-                                <div class="event-block-two">
-                                    <div class="inner-box event-block-inner">
-                                        <div class="shape-thirty"></div>
-                                        <div class="shape-thirtyone"></div>
+                <!-- Image Column -->
+                <div class="tabs-content">
+                    <!--Tab-->
+                    <div class="tab active-tab" id="tab1">
+                        <div class="outer-box">
 
-                                        <div class="time-box">
-                                            <i class="icon fal fa-paint-brush"></i>
-                                            <h6 class="time">Custom Stall Design</h6>
-                                        </div>
+                            <!-- Event Block 1 -->
+                            <div class="event-block-two">
+                                <div class="inner-box event-block-inner">
+                                    <div class="shape-thirty"></div>
+                                    <div class="shape-thirtyone"></div>
 
-                                        <div class="title-box">
-                                            <h4 class="title"><a href="#gallery">Tailored 3D Visualizations & Structural Design</a></h4>
-                                            <div class="speaker-box">
-                                                <i class="icon fa fa-building"></i>
-                                                <div class="speaker">Exhora Team <span>(Design)</span></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="text-box">
-                                            <div class="text">Creative concepts <br> that reflect your brand</div>
-                                        </div>
-
-                                        <div class="event-hover" style="background-image: url(images/resource/exhora-stall-01.jpg)"></div>
+                                    <div class="time-box">
+                                        <i class="icon fal fa-paint-brush"></i>
+                                        <h6 class="time">10:00 AM - 12:00 PM</h6>
                                     </div>
-                                </div>
-<br>
-                                <!-- Event Block 2 -->
-                                <div class="event-block-two">
-                                    <div class="inner-box event-block-inner">
-                                        <div class="shape-thirty"></div>
-                                        <div class="shape-thirtyone"></div>
 
-                                        <div class="time-box">
-                                            <i class="icon fal fa-tools"></i>
-                                            <h6 class="time">In-House Fabrication</h6>
+                                    <div class="title-box">
+                                        <h4 class="title"><a href="#gallery">Tailored 3D Visualizations & Structural
+                                                Design</a></h4>
+                                        <div class="speaker-box">
+                                            <i class="icon fa fa-building"></i>
+                                            <div class="speaker">Exhora Team <span>(Design)</span></div>
                                         </div>
-
-                                        <div class="title-box">
-                                            <h4 class="title"><a href="#gallery">Premium Materials & Quality Control</a></h4>
-                                            <div class="speaker-box">
-                                                <i class="icon fa fa-building"></i>
-                                                <div class="speaker">Exhora Team <span>(Fabrication)</span></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="text-box">
-                                            <div class="text">In-house manufacturing <br> for flawless execution</div>
-                                        </div>
-
-                                        <div class="event-hover" style="background-image: url(images/resource/exhora-stall-11.jpg)"></div>
                                     </div>
-                                </div>
-<br>
-                                <!-- Event Block 3 -->
-                                <div class="event-block-two">
-                                    <div class="inner-box event-block-inner">
-                                        <div class="shape-thirty"></div>
-                                        <div class="shape-thirtyone"></div>
 
-                                        <div class="time-box">
-                                            <i class="icon fal fa-cogs"></i>
-                                            <h6 class="time">On-Site Installation</h6>
-                                        </div>
-
-                                        <div class="title-box">
-                                            <h4 class="title"><a href="#gallery">Turnkey Setup & Seamless Handover</a></h4>
-                                            <div class="speaker-box">
-                                                <i class="icon fa fa-building"></i>
-                                                <div class="speaker">Exhora Team <span>(Operations)</span></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="text-box">
-                                            <div class="text">End-to-end management <br> on the exhibition floor</div>
-                                        </div>
-
-                                        <div class="event-hover" style="background-image: url(images/resource/exhora-stall-13.jpg)"></div>
+                                    <div class="text-box">
+                                        <div class="text">Pragati Maidan, <br> New Delhi, India</div>
                                     </div>
-                                </div>
 
+                                    <div class="event-hover"
+                                        style="background-image: url(images/resource/exhora-stall-01.jpg)"></div>
+                                </div>
                             </div>
-                        </div>
+                            <br>
+                            <!-- Event Block 2 -->
+                            <div class="event-block-two">
+                                <div class="inner-box event-block-inner">
+                                    <div class="shape-thirty"></div>
+                                    <div class="shape-thirtyone"></div>
 
-                    
-                      
+                                    <div class="time-box">
+                                        <i class="icon fal fa-tools"></i>
+                                        <h6 class="time">01:00 PM - 03:00 PM</h6>
+                                    </div>
+
+                                    <div class="title-box">
+                                        <h4 class="title"><a href="#gallery">Premium Materials & Quality Control</a>
+                                        </h4>
+                                        <div class="speaker-box">
+                                            <i class="icon fa fa-building"></i>
+                                            <div class="speaker">Exhora Team <span>(Fabrication)</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-box">
+                                        <div class="text">Bombay Exhibition</div>
+                                    </div>
+
+                                    <div class="event-hover"
+                                        style="background-image: url(images/resource/exhora-stall-11.jpg)"></div>
+                                </div>
+                            </div>
+                            <br>
+                            <!-- Event Block 3 -->
+                            <div class="event-block-two">
+                                <div class="inner-box event-block-inner">
+                                    <div class="shape-thirty"></div>
+                                    <div class="shape-thirtyone"></div>
+
+                                    <div class="time-box">
+                                        <i class="icon fal fa-cogs"></i>
+                                        <h6 class="time">04:00 PM - 06:00 PM</h6>
+                                    </div>
+
+                                    <div class="title-box">
+                                        <h4 class="title"><a href="#gallery">Turnkey Setup & Seamless Handover</a></h4>
+                                        <div class="speaker-box">
+                                            <i class="icon fa fa-building"></i>
+                                            <div class="speaker">Exhora Team <span>(Operations)</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-box">
+                                        <div class="text">India Expo Centre, <br> Greater Noida, India</div>
+                                    </div>
+
+                                    <div class="event-hover"
+                                        style="background-image: url(images/resource/exhora-stall-13.jpg)"></div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
+
+
                 </div>
             </div>
-        </section>
-        <!-- End Event Section -->
+    </div>
+    </section>
+    <!-- End Event Section -->
 
-        <!-- Pricing Section Removed -->
+    <!-- Pricing Section Removed -->
 
     <!-- End Pricing Section -->
 
@@ -1277,23 +1450,11 @@
                                 <div class="text">“Exhora Ambiance delivered an incredible stall for us at Pharma Expo
                                     2025. The design drew more visitors than any of our competitors. Their attention to
                                     detail is unmatched.”</div>
-                                <div class="icon-box"><i class="quote-icon flaticon-right-quotation-mark"></i></div>
-                                <div class="rating">
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                </div>
                             </div>
                             <div class="author-box">
                                 <div class="author-info">
                                     <div class="designation">Marketing Head,</div>
                                     <h4 class="name">Rajesh Kumar</h4>
-                                </div>
-                                <div class="image-box">
-                                    <figure class="image"><img src="images/clients/client-logo-07.png" alt="Client">
-                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -1307,23 +1468,11 @@
                                 <div class="text">“We hired Exhora for three consecutive exhibitions, and every time
                                     they exceeded our expectations. The turnkey service means we just had to show up —
                                     everything was handled perfectly.”</div>
-                                <div class="icon-box"><i class="quote-icon flaticon-right-quotation-mark"></i></div>
-                                <div class="rating">
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                </div>
                             </div>
                             <div class="author-box">
                                 <div class="author-info">
                                     <div class="designation">Operations Director,</div>
                                     <h4 class="name">Priya Mehta</h4>
-                                </div>
-                                <div class="image-box">
-                                    <figure class="image"><img src="images/clients/client-logo-08.png" alt="Client">
-                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -1337,23 +1486,11 @@
                                 <div class="text">“Our stall was the talk of the entire event. From 3D visualization to
                                     the final build, Exhora’s team nailed every detail. The ROI from that one exhibition
                                     was tremendous.”</div>
-                                <div class="icon-box"><i class="quote-icon flaticon-right-quotation-mark"></i></div>
-                                <div class="rating">
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                    <i class="flaticon-star"></i>
-                                </div>
                             </div>
                             <div class="author-box">
                                 <div class="author-info">
                                     <div class="designation">Founder & CEO,</div>
                                     <h4 class="name">Amit Sharma</h4>
-                                </div>
-                                <div class="image-box">
-                                    <figure class="image"><img src="images/clients/client-logo-09.png" alt="Client">
-                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -1500,47 +1637,86 @@
     <!-- Start Your Project Section -->
     <section class="video-section-two" style="padding: 0 0 80px 0;">
         <div class="outer-box" style="padding: 0;">
-            <div class="bg bg-image" style="background-image: url(images/background/5.jpg); background-size: cover; background-position: center; opacity: 0.9;"></div>
+            <div class="bg bg-image"
+                style="background-image: url(images/background/5.jpg); background-size: cover; background-position: center; opacity: 0.9;">
+            </div>
             <div class="auto-container">
                 <!-- Heading aligned center -->
-                <div class="content-box wow fadeInUp" style="text-align: center; padding-top: 0; padding-bottom: 40px; margin: 0 auto; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
-                    <h4 class="sub-title" style="margin: 0 0 10px 0; text-transform: uppercase; font-size: 14px; font-weight: 700; color: #fff;">Ready to Start Your Project?</h4>
-                    <h2 class="title" style="margin: 0; font-size: 3.5rem; line-height: 1.2; color: #fff; font-weight: 700;">Let's Build Your Next <br> Exhibition Stall</h2>
+                <div class="content-box wow fadeInUp"
+                    style="text-align: center; padding-top: 0; padding-bottom: 40px; margin: 0 auto; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
+                    <h4 class="sub-title"
+                        style="margin: 0 0 10px 0; text-transform: uppercase; font-size: 14px; font-weight: 700; color: #fff;">
+                        Ready to Start Your Project?</h4>
+                    <h2 class="title"
+                        style="margin: 0; font-size: 3.5rem; line-height: 1.2; color: #fff; font-weight: 700;">Let's
+                        Build Your Next <br> Exhibition Stall</h2>
                 </div>
-                
+
                 <!-- 5 Images Asymmetrical Grid (1 Large Left, 4 Small Right) -->
-                <div class="premium-image-grid" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-auto-rows: 250px; gap: 20px; max-width: 1200px; margin: 0 auto;">
-                    <div class="grid-item-1" style="grid-column: span 1; grid-row: span 2; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Centerpiece" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="premium-image-grid"
+                    style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-auto-rows: 250px; gap: 20px; max-width: 1200px; margin: 0 auto;">
+                    <div class="grid-item-1"
+                        style="grid-column: span 1; grid-row: span 2; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Centerpiece"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div class="grid-item-2" style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div class="grid-item-2"
+                        style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 1"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div class="grid-item-3" style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div class="grid-item-3"
+                        style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 2"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div class="grid-item-4" style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div class="grid-item-4"
+                        style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 3"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div class="grid-item-5" style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 4" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div class="grid-item-5"
+                        style="grid-column: span 1; grid-row: span 1; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        <img src="images/premium/img4.jpeg" alt="Premium Exhibition Stall Detail 4"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease-in-out;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
                     </div>
                 </div>
             </div>
-            
+
             <style>
                 @media (max-width: 991px) {
                     .premium-image-grid {
                         grid-template-columns: 1fr 1fr !important;
                     }
-                    .grid-item-1 { grid-column: span 2 !important; grid-row: span 2 !important; }
+
+                    .grid-item-1 {
+                        grid-column: span 2 !important;
+                        grid-row: span 2 !important;
+                    }
                 }
+
                 @media (max-width: 768px) {
                     .premium-image-grid {
                         grid-auto-rows: 150px !important;
                     }
-                    .title { font-size: 2.2rem !important; }
-                    .video-section-two { padding: 50px 0 !important; }
+
+                    .title {
+                        font-size: 2.2rem !important;
+                    }
+
+                    .video-section-two {
+                        padding: 50px 0 !important;
+                    }
                 }
             </style>
         </div>
@@ -1920,38 +2096,98 @@
                     <div class="row-3" style="margin-top: 20px;">
                         <div class="exhora-scroll-track">
                             <div class="exhora-scroll-row">
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-01.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-01.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-02.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-02.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-03.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-03.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-04.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-04.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-05.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-05.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-06.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-06.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-07.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-07.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-08.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-08.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-09.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-09.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-10.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-10.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-11.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-11.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-12.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-12.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-13.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-13.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-14.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-14.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-15.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-15.jpg" alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-01.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-01.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-02.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-02.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-03.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-03.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-04.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-04.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-05.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-05.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-06.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-06.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-07.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-07.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-08.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-08.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-09.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-09.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-10.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-10.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-11.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-11.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-12.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-12.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-13.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-13.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-14.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-14.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-15.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-15.jpg"
+                                            alt="Exhora Stall"></a></div>
                             </div>
                             <div class="exhora-scroll-row">
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-01.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-01.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-02.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-02.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-03.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-03.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-04.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-04.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-05.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-05.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-06.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-06.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-07.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-07.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-08.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-08.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-09.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-09.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-10.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-10.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-11.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-11.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-12.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-12.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-13.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-13.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-14.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-14.jpg" alt="Exhora Stall"></a></div>
-                                <div class="gallery-card"><a href="images/resource/exhora-stall-15.jpg" data-rel="lightcase"><img src="images/resource/exhora-stall-15.jpg" alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-01.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-01.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-02.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-02.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-03.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-03.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-04.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-04.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-05.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-05.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-06.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-06.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-07.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-07.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-08.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-08.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-09.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-09.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-10.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-10.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-11.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-11.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-12.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-12.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-13.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-13.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-14.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-14.jpg"
+                                            alt="Exhora Stall"></a></div>
+                                <div class="gallery-card"><a href="images/resource/exhora-stall-15.jpg"
+                                        data-rel="lightcase"><img src="images/resource/exhora-stall-15.jpg"
+                                            alt="Exhora Stall"></a></div>
                             </div>
                         </div>
                     </div>
@@ -1979,17 +2215,23 @@
                             <div class="widget-content">
                                 <div class="logo"><a href="#home"> <img src="images/logo.svg"
                                             alt="Exhora Ambiance Logo"></a></div>
-                                <div class="text">Exhora Ambiance specializes in premium exhibition stall design, fabrication,
+                                <div class="text">Exhora Ambiance specializes in premium exhibition stall design,
+                                    fabrication,
                                     and turnkey installation across India. Trusted by leading brands.</div>
                                 <div class="email-box">
-                                    <a href="mailto:info@exhoraambiance.com" style="display: block; margin-bottom: 5px;">info@exhoraambiance.com</a>
-                                    <a href="mailto:neha@exhoraambiance.com" style="display: block; margin-bottom: 5px;">neha@exhoraambiance.com</a>
-                                    <a href="tel:+919311257132" style="display: block;">+91 93112 57132</a>
+                                    <a href="mailto:info@exhoraambiance.com"
+                                        style="display: block; margin-bottom: 5px; color: #ffffff;">info@exhoraambiance.com</a>
+                                    <a href="mailto:neha@exhoraambiance.com"
+                                        style="display: block; margin-bottom: 5px; color: #ffffff;">neha@exhoraambiance.com</a>
+                                    <a href="tel:+919311257132" style="display: block; color: #ffffff;">+91 93112 57132</a>
                                 </div>
                                 <ul class="social-icon-two light" style="margin-top: 20px;">
-                                    <li><a href="https://www.instagram.com/exhora_ambiance/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/exhoraambiance" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://wa.me/919558016200" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href="https://www.instagram.com/exhora_ambiance/" target="_blank"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/exhoraambiance" target="_blank"><i
+                                                class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://wa.me/919558016200" target="_blank"><i
+                                                class="fab fa-whatsapp"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -2016,7 +2258,8 @@
                         <div class="footer-widget newsletter-widget">
                             <h4 class="widget-title">Get in Touch</h4>
                             <div class="widget-content">
-                                <div class="text">Ready to transform your vision into an iconic exhibition experience? We'd love to hear from you.</div>
+                                <div class="text">Ready to transform your vision into an iconic exhibition experience?
+                                    We'd love to hear from you.</div>
                                 <h5 class="title"><i class="flaticon-place"></i>Address</h5>
                                 <div class="text">Omega 1, NRI City, Greater Noida, <br>Uttar Pradesh 201310</div>
                                 <div class="newsletter-form" style="margin-top: 20px;">
@@ -2041,9 +2284,11 @@
                                 <article class="recent-post">
                                     <div class="inner">
                                         <figure class="post-thumb"><a href="#portfolio"><img
-                                                    src="images/premium/img3.jpeg" alt="Premium Exhibition Stall"></a></figure>
+                                                    src="images/premium/img3.jpeg" alt="Premium Exhibition Stall"></a>
+                                        </figure>
                                         <div class="content">
-                                            <h5 class="post-title"><a href="#portfolio">Custom Stall Fabrication for Tech Expo</a></h5>
+                                            <h5 class="post-title"><a href="#portfolio">Custom Stall Fabrication for
+                                                    Tech Expo</a></h5>
                                             <ul class="post-meta">
                                                 <li><i class="icon fa fa-building"></i> Delhi</li>
                                             </ul>
@@ -2055,9 +2300,11 @@
                                 <article class="recent-post">
                                     <div class="inner">
                                         <figure class="post-thumb"><a href="#portfolio"><img
-                                                    src="images/premium/img4.jpeg" alt="Modern Exhibition Booth"></a></figure>
+                                                    src="images/premium/img4.jpeg" alt="Modern Exhibition Booth"></a>
+                                        </figure>
                                         <div class="content">
-                                            <h5 class="post-title"><a href="#portfolio">Premium Brand Integration Showcase</a></h5>
+                                            <h5 class="post-title"><a href="#portfolio">Premium Brand Integration
+                                                    Showcase</a></h5>
                                             <ul class="post-meta">
                                                 <li><i class="icon fa fa-building"></i> Greater Noida</li>
                                             </ul>
