@@ -809,9 +809,9 @@ Scroll To Top style
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  gap: 12px;
-  border-radius: 40px;
-  padding: 8px;
+  gap: 10px;
+  border-radius: 30px;
+  padding: 10px;
   background-color: #150036;
 }
 .dark-layout .social-icon-three {
@@ -819,14 +819,14 @@ Scroll To Top style
 }
 .social-icon-three a {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   color: var(--theme-color-light);
-  font-size: 22px;
+  font-size: 16px;
   background-color: transparent;
   transition: all 300ms ease;
 }

@@ -13,7 +13,7 @@
     <!-- Page Title -->
     <title>Exora Ambiance | Exhibition Stall Design &amp; Fabrication</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
@@ -27,9 +27,26 @@
         .logo-box img,
         .nav-logo img,
         .logo img {
-            max-height: 70px !important;
+            max-height: 95px !important;
             width: auto !important;
             object-fit: contain !important;
+            transition: all 0.3s ease;
+        }
+        /* Increased logo size specifically for sidebar */
+        .hidden-bar .logo-box img {
+            max-height: 120px !important;
+        }
+
+        /* Mobile Logo Size Optimization */
+        @media only screen and (max-width: 767px) {
+            .logo-box img,
+            .nav-logo img,
+            .logo img {
+                max-height: 80px !important;
+            }
+            .hidden-bar .logo-box img {
+                max-height: 100px !important;
+            }
         }
 
         /* Merge logo box with the white menu bar */
@@ -419,42 +436,9 @@
             width: 100%;
         }
 
-        .faq-section .image-column .image.two {
-            position: absolute;
-            bottom: -50px;
-            /* Bring it further down as requested */
-            right: -20px;
-            /* Shift right to peek out */
-            width: 70%;
-            /* Make second image larger */
-            margin: 0;
-            z-index: 2;
-            /* Moved SECOND image OVER the first image! */
-            border: none;
-            /* Remove extra white bg/border */
+        .faq-section .image-column .image img {
             border-radius: 15px;
-            /* Apply same radius */
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-
-        .faq-section .image-column .image.two img {
-            border-radius: 15px;
-            /* Radius */
             width: 100%;
-        }
-
-        /* Circular Badge Positioning */
-        .faq-section .image-column .inner-column .exp-box {
-            display: flex !important;
-            /* Override the max-width:1699px display:none */
-            position: absolute;
-            top: -20px;
-            /* Overlap on top right of main image */
-            right: -10px;
-            z-index: 3;
-            /* Topmost */
-            transform: scale(0.85);
-            /* Slightly scale down to fit nicely */
         }
 
         /* Mobile: Reduce size and boldness of About Us feature list */
@@ -463,6 +447,15 @@
                 font-size: 16px !important;
                 font-weight: 500 !important;
                 line-height: 1.3 !important;
+            }
+
+            .faq-section .image-column .image {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+
+            .faq-section .image-column .inner-column {
+                padding: 20px 0 !important;
             }
         }
 
@@ -675,6 +668,12 @@
                 max-height: 45px !important; /* Smaller logo for mobile headers and menus */
                 padding: 5px 0;
             }
+        }
+        /* Fix Footer Recent Project Image Border Radius */
+        .footer-widget.post-widget .recent-post .inner .post-thumb,
+        .footer-widget.post-widget .recent-post .inner .post-thumb img {
+            border-radius: 12px !important;
+            overflow: hidden !important;
         }
     </style>
 
@@ -1565,20 +1564,6 @@
                     <div class="inner-column">
                         <figure class="image"><img src="images/resource/exhora-stall-07.jpg"
                                 alt="Exora Exhibition Stall FAQ"></figure>
-                        <figure class="image two"><img src="images/resource/exhora-stall-15.jpg"
-                                alt="Exora Stall Design FAQ"></figure>
-                        <!-- <div class="icon-nine"></div> -->
-                        <div class="exp-box">
-                            <svg viewBox="0 0 100 100" width="100" height="100" class="circular-text">
-                                <defs>
-                                    <path id="circle" d="M 50, 50m -37, 0a 37,37 0 1,1 74,0a 37,37 0 1,1 -74,0" />
-                                </defs>
-                                <text>
-                                    <textPath xlink:href="#circle">Questions about exhibitions </textPath>
-                                </text>
-                            </svg>
-                            <div class="logo"><img src="images/logo2.png" alt="Exora Logo" style="max-height:55px;width:auto;"></div>
-                        </div>
                     </div>
                 </div>
 
@@ -1675,7 +1660,7 @@
     <!-- End Faq Section -->
 
     <!-- Start Your Project Section - Carousel -->
-    <section class="project-showcase-section video-section-two" style="padding: 60px 0 80px 0; min-height: 100vh; display: flex; align-items: center;">
+    <section class="project-showcase-section video-section-two" style="padding: 10px 0 10px 0; position: relative;">
         <div class="outer-box" style="padding: 0; position: relative; width: 100%;">
             <div class="bg bg-image"
                 style="background-image: url(images/background/5.jpg); background-size: cover; background-position: center; opacity: 1; position: absolute; inset: 0; z-index: -1;">
@@ -1683,7 +1668,7 @@
             <div class="auto-container">
                 <!-- Heading -->
                 <div class="content-box wow fadeInUp"
-                    style="text-align: center; padding: 0 40px 40px 40px !important; margin: 10px auto 0 auto; max-width: 1200px;">
+                    style="text-align: center; padding: 40px 40px 40px 10px !important; margin: 10px auto 0 auto; max-width: 1200px;">
                     <h4 class="sub-title"
                         style="margin: 0 0 10px 0; text-transform: uppercase; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.9); letter-spacing: 2px;">
                         Ready to Start Your Project?</h4>
@@ -2025,7 +2010,7 @@
                 .project-carousel-wrapper {
                     position: relative;
                     max-width: 1400px;
-                    margin: 0 auto;
+                    margin: 20px auto 0 auto;
                     display: flex;
                     align-items: center;
                     gap: 30px;
@@ -2088,6 +2073,7 @@
                     align-items: center;
                     gap: 0;
                     min-height: 580px;
+                    padding-bottom: 30px;
                     background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15));
                     border-radius: 24px;
                     overflow: hidden;
@@ -2201,8 +2187,8 @@
                     display: flex;
                     justify-content: center;
                     gap: 10px;
-                    margin-top: 50px;
-                    margin-bottom: 10px;
+                    margin-top: 60px;
+                    margin-bottom: 40px;
                 }
 
                 .indicator {
