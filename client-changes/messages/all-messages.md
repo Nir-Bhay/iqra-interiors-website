@@ -83,3 +83,7 @@
 ## [Image 11] Footer Recent Projects Reference
 - **File:** `client-changes/images/11_footer_recent_projects_ref.jpg`
 - **Instruction:** Is image mein circle kiye gaye area (Recent Projects section) mein content update karna hai. Specifically, Therm-X ya naye stall designs yahan replace honge.
+
+## [Image 12] Therm-x Industrial Equipments Stall (IMTEX 2025)
+- **File:** `client-changes/images/12_therm-x_industrial_equip_stall.jpg`
+- **Instruction:** "Ye wala" - Referencing the main stall photo for Therm-x Industrial Equipments to be used in the updated sections.
