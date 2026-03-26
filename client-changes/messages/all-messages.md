@@ -109,3 +109,13 @@
 ## [Image 15] SNG Marble Handicrafts (Wide Angle View)
 - **File:** `client-changes/images/15_sng_marble_wide_angle.jpg`
 - **Context:** Wide angle perspective of the SNG Marble stall. Shows branding (SNG Marble website on pillars) and overall layout. Complements Image 14 for the gallery.
+
+## [Image 16] Hero Form Reference (Stall Craft)
+- **File:** `client-changes/images/16_stallcraft_hero_form_ref.jpg`
+- **Instruction:** Is image mein circled floating form ("SUBMIT YOUR DETAILS") ki tarah hi humein Exora Ambiance ke Hero section mein form add karna hai.
+- **Form Fields to Match:**
+    * Your Name
+    * Business Email
+    * Contact No.
+    * Your Requirements
+    * Button: "GET A QUOTE" (Orange color theme like reference)
