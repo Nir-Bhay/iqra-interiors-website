@@ -119,3 +119,30 @@
     * Contact No.
     * Your Requirements
     * Button: "GET A QUOTE" (Orange color theme like reference)
+
+## [Contact Info Update] Additional Numbers & Primary Name
+- **Name:** NEHA SINGH
+- **New Numbers to Add:** 
+    * 9667902737
+    * 88824 89806
+- **Instruction:** "CONTACT ME YE DONO NO. BHI ADD KRO". Change the existing number in the WhatsApp section (refer Image 17).
+
+## [Image 17] Contact Info WhatsApp Section Reference
+- **File:** `client-changes/images/17_contact_info_whatsapp_ref.jpg`
+- **Instruction:** Is circled WhatsApp number ko update karna hai aur naye numbers (9667902737, 88824 89806) integrate karne hain.
+
+## [Image 18] Gallery Duplicate Removal Reference
+- **File:** `client-changes/images/18_gallery_duplicate_removal_ref.jpg`
+- **Instruction:** "YE REPEATE HORE HAI ONLY 1 ADD KRO SAME IMAGE". Circled images are duplicates; remove them and keep only one unique instance.
+
+## [Image 19] About Section Icons Reference
+- **File:** `client-changes/images/19_about_section_icons_ref.jpg`
+- **Instruction:** "Ye bhi add kro" / "ye bhi dalo". Circled icons (Bespoke Stall, Turnkey Solutions, etc.) need to be updated/highlighted. Specifically replace the existing cartoonish checkmarks with professional ones.
+
+## [Queue Recovery] Verified Lost Messages
+- **Zaibunco Industries Pvt. Ltd.** (IIFF 2025)
+- **Ideate Informatics LLP** (India Energy Week 2025)
+- **Sopan Group of Companies** (India Energy Week 2025)
+- **East India Company** (IHGF 2026)
+- **Office Address:** msx tower II, ALPHA 1st, greater noida 201310
+- **Event:** SATTE FEB 2026
