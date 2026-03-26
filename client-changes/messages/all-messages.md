@@ -105,3 +105,7 @@
 ## [Image 14] SNG Marble Handicrafts Stall
 - **File:** `client-changes/images/14_sng_marble_handicrafts_stall.jpg`
 - **Context:** Primary reference photo for SNG Marble Handicrafts (IHGF Exhibition). Focused on handicrafts display and elegant lighting. To be used in the updated gallery/stall sections.
+
+## [Image 15] SNG Marble Handicrafts (Wide Angle View)
+- **File:** `client-changes/images/15_sng_marble_wide_angle.jpg`
+- **Context:** Wide angle perspective of the SNG Marble stall. Shows branding (SNG Marble website on pillars) and overall layout. Complements Image 14 for the gallery.
