@@ -87,3 +87,7 @@
 ## [Image 12] Therm-x Industrial Equipments Stall (IMTEX 2025)
 - **File:** `client-changes/images/12_therm-x_industrial_equip_stall.jpg`
 - **Instruction:** "Ye wala" - Referencing the main stall photo for Therm-x Industrial Equipments to be used in the updated sections.
+
+## [Functional Issue] Contact Button Anchor
+- **Issue:** Contact button pe click karne pe page niche (Footer) pe scroll ho raha hai.
+- **Goal:** Is behavior ko fix karke correct "Contact Us" section (jahan form hai) par anchor karna hai.
