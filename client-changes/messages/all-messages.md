@@ -91,3 +91,8 @@
 ## [Functional Issue] Contact Button Anchor
 - **Issue:** Contact button pe click karne pe page niche (Footer) pe scroll ho raha hai.
 - **Goal:** Is behavior ko fix karke correct "Contact Us" section (jahan form hai) par anchor karna hai.
+
+## [Image 13] Navigation "CONTACT" Bug Reference
+- **File:** `client-changes/images/13_nav_contact_bug_ref.jpg`
+- **Visual Proof:** Screenshot shows that clicking "CONTACT" in the header scrolls to the Footer instead of the Contact section.
+- **Goal:** Update the navbar link to point to `#contact-section` (or the correct ID for the form) instead of `#contact` or wherever it currently leads.
