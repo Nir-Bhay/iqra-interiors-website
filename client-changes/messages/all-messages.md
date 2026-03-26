@@ -96,3 +96,8 @@
 - **File:** `client-changes/images/13_nav_contact_bug_ref.jpg`
 - **Visual Proof:** Screenshot shows that clicking "CONTACT" in the header scrolls to the Footer instead of the Contact section.
 - **Goal:** Update the navbar link to point to `#contact-section` (or the correct ID for the form) instead of `#contact` or wherever it currently leads.
+
+## [UI/UX Update] Floating Hero Form (High Priority)
+- **Instruction:** "JESE IS WEBSITE PE FORM AARA HAI UAPR HI AISE FORM KO UPAR BHI ADD KRDO.."
+- **Context:** Referring to the "Stall Craft" reference earlier. Implement a floating lead collection form in the Hero section of the Exora Ambiance website.
+- **Form Goal:** Same fields as the main contact form, but compact and visible on initial load (above the fold).
