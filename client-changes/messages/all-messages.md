@@ -75,3 +75,7 @@
 
 ## [Image 10] BEC November 2025 Reference
 - **File:** `client-changes/images/10_bec_nov_2025.jpg`
+
+## [Design Update] Therm-X Design Placement
+- **Instruction:** "YAHA PE THERM-X KA DESIGN DALO"
+- **Note:** Need to place Therm-X design in the specified area (referencing earlier "Stall Content" reference image 03).
