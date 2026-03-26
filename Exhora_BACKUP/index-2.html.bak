@@ -764,10 +764,10 @@
                             <li><span class="bold">Phone:</span> <a href="tel:+919311257132">+91 9311257132</a></li>
                         </ul>
                         <ul class="social-icon">
-                            <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="https://wa.me/919558016200" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="index-2.html#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="index-2.html#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="index-2.html#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="index-2.html#"><i class="fab fa-pinterest-p"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -860,10 +860,10 @@
 
 
                     <ul class="social-links">
-                        <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="https://wa.me/919558016200" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="index-2.html#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="index-2.html#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="index-2.html#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="index-2.html#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </nav>
             </div><!-- End Mobile Menu -->
@@ -957,10 +957,10 @@
                 </ul>
 
                 <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://wa.me/919558016200" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="index-2.html#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="index-2.html#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="index-2.html#"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a href="index-2.html#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </section>
@@ -2980,38 +2980,30 @@
 
                     // Collect form data
                     const formData = new FormData(form);
-                    const data = Object.fromEntries(formData.entries());
 
                     // Form submission via Fetch API
-                    fetch('https://webstarts.in/api/contact', {
+                    // Replace 'https://formspree.io/f/YOUR_FORM_ID' with your actual endpoint
+                    fetch('https://formspree.io/f/YOUR_FORM_ID', {
                         method: 'POST',
-                        body: JSON.stringify(data),
+                        body: formData,
                         headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
+                            'Accept': 'application/json'
                         }
                     })
                     .then(response => {
                         if (response.ok) {
                             // Success message
                             formMessage.style.display = 'block';
-                            formMessage.style.background = '#daf5d7';
-                            formMessage.style.color = '#333';
+                            formMessage.style.background = '#d4edda';
+                            formMessage.style.color = '#155724';
                             formMessage.style.border = '1px solid #c3e6cb';
-                            formMessage.textContent = '✓ Message sent successfully! Our team will contact you within 24 hours.';
+                            formMessage.textContent = '✓ Message sent successfully! We\'ll get back to you within 48 hours.';
                             
                             // Reset form
                             form.reset();
                             charCount.textContent = '0 / 500';
                         } else {
                             // Error message
-                            formMessage.style.display = 'block';
-                            formMessage.style.background = '#f8d7da';
-                            formMessage.style.color = '#721c24';
-                            formMessage.style.border = '1px solid #f5c6cb';
-                            formMessage.textContent = 'Oops! There was a problem submitting your form.';
-                        }
-                    })
                             formMessage.style.display = 'block';
                             formMessage.style.background = '#f8d7da';
                             formMessage.style.color = '#721c24';
