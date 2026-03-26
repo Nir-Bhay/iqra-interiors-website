@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/index-2.html"
+  status = 200
+
+[web]
+  headers = { "Cache-Control" = "public, max-age=31536000" }

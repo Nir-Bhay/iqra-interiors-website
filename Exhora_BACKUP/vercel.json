@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "name": "exora-ambiance",
+  "builds": [
+    {
+      "src": "index-2.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "images/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "fonts/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index-2.html"
+    }
+  ],
+  "cleanUrls": true
+}

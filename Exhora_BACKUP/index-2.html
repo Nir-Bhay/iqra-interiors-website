@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name="robots" content="index, follow">
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,65 @@
         content="Exora Ambiance specializes in creating stunning exhibition stalls and trade show booths. 5+ years of expertise in custom stall design, fabrication, and installation across India and globally.">
     <meta name="keywords"
         content="exhibition stall design, trade show booth, stall fabrication, exhibition booth design, custom stall, event booth, Greater Noida stall design, exhibition contractor, turnkey exhibition solutions">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://exoraambiance.com/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Exora Ambiance | Exhibition Stall Design & Fabrication">
+    <meta property="og:description" content="5+ years of expertise in custom exhibition stall design and fabrication across India. Transform your brand presence with Exora Ambiance.">
+    <meta property="og:image" content="https://exoraambiance.com/images/logo2.png">
+    <meta property="og:url" content="https://exoraambiance.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Exora Ambiance | Exhibition Stall Design & Fabrication">
+    <meta name="twitter:description" content="5+ years of expertise in custom exhibition stall design and fabrication across India.">
+    <meta name="twitter:image" content="https://exoraambiance.com/images/logo2.png">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Exora Ambiance",
+      "image": "https://exoraambiance.com/images/logo2.png",
+      "@id": "",
+      "url": "https://exoraambiance.com/",
+      "telephone": "+91 97116 11666",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Greater Noida",
+        "addressLocality": "Noida",
+        "addressRegion": "UP",
+        "postalCode": "201308",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.4744,
+        "longitude": 77.504
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/exoraambiance",
+        "https://www.instagram.com/exoraambiance"
+      ]
+    }
+    </script>
     <!-- Page Title -->
     <title>Exora Ambiance | Exhibition Stall Design &amp; Fabrication</title>
     <!-- Favicon Icon -->
@@ -665,9 +725,14 @@
             .nav-logo img,
             .logo img,
             .logo-box img {
-                max-height: 45px !important; /* Smaller logo for mobile headers and menus */
-                padding: 5px 0;
+                max-height: 65px !important; /* Increased for mobile visibility */
+                padding: 2px 0;
             }
+        }
+        /* Footer Logo Size Reduction */
+        .main-footer .footer-widget .logo img {
+            max-height: 50px !important;
+            width: auto !important;
         }
         /* Fix Footer Recent Project Image Border Radius */
         .footer-widget.post-widget .recent-post .inner .post-thumb,
@@ -764,9 +829,9 @@
                 <nav class="menu-box">
                     <div class="upper-box">
                         <div class="logo-box">
-                            <div class="nav-logo light"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
+                            <div class="nav-logo light"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a loading="lazy">
                             </div>
-                            <div class="nav-logo dark"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
+                            <div class="nav-logo dark"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a loading="lazy">
                             </div>
                         </div>
                         <div class="close-btn"><i class="icon fa fa-times"></i></div>
@@ -859,9 +924,9 @@
             <div class="inner-box">
                 <div class="upper-box">
                     <div class="logo-box">
-                        <div class="nav-logo light"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
+                        <div class="nav-logo light"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a loading="lazy">
                         </div>
-                        <div class="nav-logo dark"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a></div>
+                        <div class="nav-logo dark"><a href="index.html"><img src="images/logo2.png" alt="Logo"></a></div loading="lazy">
                     </div>
                     <div class="close-btn"><i class="icon fa fa-times"></i></div>
                 </div>
@@ -944,9 +1009,9 @@
                             <figure class="image two overlay-anim reveal"><img src="images/resource/exhora-stall-03.jpg"
                                     alt="Exora Ambiance Premium Booth Design"></figure>
                             <div class="author-box bounce-x">
-                                <img src="images/clients/brand-logo-1.jpg" alt="Client Brand">
-                                <img src="images/clients/brand-logo-2.png" alt="Client Brand">
-                                <img src="images/clients/brand-logo-3.png" alt="Client Brand">
+                                <img src="images/clients/brand-logo-1.jpg" alt="Client Brand" loading="lazy">
+                                <img src="images/clients/brand-logo-2.png" alt="Client Brand" loading="lazy">
+                                <img src="images/clients/brand-logo-3.png" alt="Client Brand" loading="lazy">
                                 <div class="text">100+</div>
                             </div>
                         </div>
@@ -1109,7 +1174,7 @@
                         </div>
                     </div>
 
-                    <figure class="image reveal bounce-x"><img src="images/Untitled.png" alt="Exhibition Stall">
+                    <figure class="image reveal bounce-x"><img src="images/Untitled.png" alt="Exhibition Stall" loading="lazy">
                     </figure>
                 </div>
             </div>
