@@ -41,3 +41,37 @@
 ## [Stall Update] Therm-x Industrial Equipments | IMTEX 2025
 - **Stall Size:** 42 SQM
 - **Description:** Reflected strength, precision, and innovation. Organized and visually impactful presentation of industrial products. Modern design elements, positive client feedback.
+
+## [Stall Update] Zaibunco Industries Pvt. Ltd. – Exhibition Stall
+- **Event:** IIFF 2025
+- **Description:** Designed to create a strong presence at IIFF 2025. Balanced combination of visual appeal and practical design. Structured layout enhancing branding and product display. Successful execution well appreciated by the client.
+
+## [Stall Update] Ideate Informatics LLP | India Energy Week 2025
+- **Description:** Innovation combined with functionality. Focused on clarity, openness, and impactful branding. Professional exhibition presence with smart space utilization for maximum engagement.
+
+## [Stall Update] Sopan Group of Companies – India Energy Week 2025 Stall
+- **Description:** Modern stall with clean, well-structured layout. Strong branding and smooth visitor interaction. High attention to detail and quality finishing.
+
+## [Stall Update] East India Company – IHGF 2026
+- **Description:** Combined refined design elements with practical layout planning. Clean and premium presentation. Efficient planning for smooth visitor movement. Positive client feedback.
+
+## [Contact Info Update] Office Address
+- **Address:** msx tower II, ALPHA 1st, greater noida 201310
+
+## [Image 04] SATTE FEB 2026 Reference
+- **File:** `client-changes/images/04_satte_feb_2026.jpg`
+
+## [Image 05] ABS Thai Stall Reference
+- **File:** `client-changes/images/05_abs_thai_stall.jpg`
+
+## [Image 06-07] Travelwidus Stall References
+- **Files:** `06_travelwidus_stall_1.jpg`, `07_travelwidus_stall_2.jpg`
+
+## [Image 08] IMTEX (BIEC) January 2026 Reference
+- **File:** `client-changes/images/08_imtex_jan_2026.jpg`
+
+## [Image 09] Budan Coffee Stall Reference
+- **File:** `client-changes/images/09_budan_coffee_stall_1.jpg`
+
+## [Image 10] BEC November 2025 Reference
+- **File:** `client-changes/images/10_bec_nov_2025.jpg`
