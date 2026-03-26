@@ -101,3 +101,7 @@
 - **Instruction:** "JESE IS WEBSITE PE FORM AARA HAI UAPR HI AISE FORM KO UPAR BHI ADD KRDO.."
 - **Context:** Referring to the "Stall Craft" reference earlier. Implement a floating lead collection form in the Hero section of the Exora Ambiance website.
 - **Form Goal:** Same fields as the main contact form, but compact and visible on initial load (above the fold).
+
+## [Image 14] SNG Marble Handicrafts Stall
+- **File:** `client-changes/images/14_sng_marble_handicrafts_stall.jpg`
+- **Context:** Primary reference photo for SNG Marble Handicrafts (IHGF Exhibition). Focused on handicrafts display and elegant lighting. To be used in the updated gallery/stall sections.
