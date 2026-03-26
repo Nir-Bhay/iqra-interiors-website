@@ -79,3 +79,7 @@
 ## [Design Update] Therm-X Design Placement
 - **Instruction:** "YAHA PE THERM-X KA DESIGN DALO"
 - **Note:** Need to place Therm-X design in the specified area (referencing earlier "Stall Content" reference image 03).
+
+## [Image 11] Footer Recent Projects Reference
+- **File:** `client-changes/images/11_footer_recent_projects_ref.jpg`
+- **Instruction:** Is image mein circle kiye gaye area (Recent Projects section) mein content update karna hai. Specifically, Therm-X ya naye stall designs yahan replace honge.
