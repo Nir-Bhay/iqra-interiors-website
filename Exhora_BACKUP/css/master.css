@@ -7800,7 +7800,7 @@ Scroll To Top style
 .countdown-section .bg-pattern-2 {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1px;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -7822,9 +7822,9 @@ Scroll To Top style
 .countdown-section .outer-box .time-countdown {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 30px;
-  padding-top: 28px;
+  padding-bottom: 120px;
   padding-left: 125px;
 }
 @media (max-width: 1199.98px) {

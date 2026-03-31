@@ -699,6 +699,13 @@
 	
 	// Text Invert
 	function initTextReveal() {
+		// Prevent awkward mid-word breaks on responsive layouts.
+		// Character-level splitting is kept for larger screens only.
+		const isResponsiveViewport = window.matchMedia("(max-width: 991.98px)").matches;
+		if (isResponsiveViewport) {
+			return;
+		}
+
 		const tagetedElementContainer =
 			document.querySelectorAll(".text-reveal-anim");
 		if (tagetedElementContainer?.length) {

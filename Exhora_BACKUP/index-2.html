@@ -71,8 +71,9 @@
         "closes": "18:00"
       },
       "sameAs": [
-        "https://www.facebook.com/exoraambiance",
-        "https://www.instagram.com/exoraambiance"
+        "https://www.facebook.com/share/1B9HM3FFb9/",
+        "https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==",
+        "https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&utm_content=profile&utm_medium=member_android"
       ]
     }
     </script>
@@ -92,9 +93,9 @@
         "availableLanguage": ["English", "Hindi"]
       },
       "sameAs": [
-        "https://www.facebook.com/exoraambiance",
-        "https://www.instagram.com/exoraambiance",
-        "https://www.linkedin.com/company/exora-ambiance/"
+        "https://www.facebook.com/share/1B9HM3FFb9/",
+        "https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==",
+        "https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&utm_content=profile&utm_medium=member_android"
       ]
     }
     </script>
@@ -317,14 +318,362 @@
         }
 
         /* Countdown Section Image Size & Position */
+        .countdown-section {
+            padding: 0 !important;
+            height: 429px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .countdown-section .outer-box {
+            position: relative;
+            overflow: hidden;
+            padding-right: 410px !important;
+            min-height: 335px !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .countdown-section .outer-box .row {
+            width: 100%;
+            min-height: 335px;
+            display: flex;
+            align-items: center !important;
+            justify-content: space-between;
+            margin: 0 !important;
+        }
+
+        .countdown-section .title-box,
+        .countdown-section .timer-column {
+            margin-bottom: 0 !important;
+        }
+
+        .countdown-section .title-box {
+            display: flex;
+            align-items: center;
+            flex: 0 0 42%;
+            max-width: 42%;
+        }
+
+        .countdown-section .title-box .sec-title {
+            margin-bottom: 0;
+            max-width: 320px;
+            padding-bottom: 120px;
+        }
+
+        .countdown-section .timer-column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 58%;
+            max-width: 58%;
+        }
+
+        .countdown-section .time-counter {
+            width: 100%;
+            text-align: center;
+        }
+
+        .countdown-section .timer-column .time-countdown {
+            margin: 0 auto;
+        }
+
         .countdown-section .outer-box .image {
             width: 410px !important;
-            right: -210px !important;
+            left: 911px !important;
+            top: -9px !important;
+            right: auto !important;
+            bottom: auto !important;
+            height: 100% !important;
+            margin: 0 !important;
         }
 
         .countdown-section .outer-box .image img {
             width: 100% !important;
-            height: auto !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+
+        .countdown-section .countdown-image-cta {
+            position: absolute;
+            right: 0;
+            bottom: 16px;
+            width: 410px;
+            display: flex;
+            justify-content: center;
+            z-index: 6;
+        }
+
+        .countdown-section .countdown-image-cta .theme-btn {
+            min-height: 48px;
+            padding: 10px 24px;
+        }
+
+        @media (max-width: 1199px) {
+            .countdown-section {
+                height: auto;
+                padding: 48px 0 !important;
+            }
+
+            .countdown-section .outer-box {
+                padding-right: 0 !important;
+                min-height: 320px !important;
+                display: block;
+            }
+
+            .countdown-section .outer-box .row {
+                min-height: 320px;
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+                justify-content: center;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .countdown-section .title-box,
+            .countdown-section .timer-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .countdown-section .title-box .sec-title {
+                max-width: 100%;
+                padding-bottom: 0;
+                margin: 0 auto;
+            }
+
+            .countdown-section .title-box .sec-title h2 {
+                font-size: clamp(36px, 5vw, 52px) !important;
+                line-height: 1.1 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .countdown-section .time-counter {
+                text-align: center;
+            }
+
+            .countdown-section .time-countdown {
+                justify-content: center !important;
+                padding-left: 0 !important;
+                padding-top: 18px !important;
+                padding-bottom: 0 !important;
+                gap: 22px;
+                flex-wrap: wrap;
+                row-gap: 12px;
+            }
+
+            .countdown-section .time-countdown .counter-column {
+                min-width: 96px;
+            }
+
+            .countdown-section .outer-box .image,
+            .countdown-section .countdown-image-cta {
+                display: none !important;
+            }
+        }
+
+        /* Tablet: image hidden, give full width to heading + countdown */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .countdown-section .outer-box .row {
+                flex-direction: row;
+                align-items: center !important;
+                justify-content: space-between;
+                text-align: left;
+                gap: 28px;
+            }
+
+            .countdown-section .title-box {
+                flex: 0 0 42%;
+                max-width: 42%;
+                justify-content: flex-start;
+            }
+
+            .countdown-section .title-box .sec-title {
+                width: 100%;
+                margin: 0;
+                text-align: left;
+            }
+
+            .countdown-section .title-box .sec-title h2 {
+                font-size: clamp(38px, 3.4vw, 48px) !important;
+            }
+
+            .countdown-section .title-box .sec-title h2 br {
+                display: none;
+            }
+
+            .countdown-section .timer-column {
+                flex: 0 0 58%;
+                max-width: 58%;
+                justify-content: flex-start;
+            }
+
+            .countdown-section .time-counter {
+                width: 100%;
+                text-align: left;
+            }
+
+            .countdown-section .time-countdown {
+                justify-content: flex-start !important;
+                width: 100%;
+                gap: 16px;
+                row-gap: 10px;
+            }
+
+            .countdown-section .time-countdown .counter-column {
+                min-width: 78px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .countdown-section {
+                height: auto;
+                padding: 40px 0 !important;
+            }
+
+            .countdown-section .outer-box {
+                padding-right: 0 !important;
+                min-height: auto !important;
+                display: block;
+            }
+
+            .countdown-section .outer-box .row {
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .countdown-section .title-box,
+            .countdown-section .timer-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .countdown-section .title-box {
+                justify-content: center;
+            }
+
+            .countdown-section .title-box .sec-title {
+                max-width: 100%;
+                padding-bottom: 0;
+            }
+
+            .countdown-section .title-box .sec-title h2 {
+                font-size: clamp(34px, 8vw, 46px) !important;
+                line-height: 1.12 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .countdown-section .timer-column {
+                justify-content: center;
+            }
+
+            .countdown-section .time-counter {
+                text-align: center;
+            }
+
+            .countdown-section .time-countdown {
+                justify-content: center !important;
+                padding-left: 0 !important;
+                padding-top: 20px !important;
+                padding-bottom: 0 !important;
+                gap: 18px;
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
+
+            .countdown-section .time-countdown .counter-column {
+                min-width: 84px;
+            }
+
+            .countdown-section .outer-box .image,
+            .countdown-section .countdown-image-cta {
+                display: none !important;
+            }
+        }
+
+        .upcoming-exhibitions-section {
+            position: relative;
+            padding: 90px 0 70px;
+            background: #f6f5fb;
+        }
+
+        .upcoming-exhibitions-section .section-heading {
+            max-width: 720px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .upcoming-exhibitions-section .section-heading .sub-title {
+            color: #6f2cff;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .upcoming-exhibitions-section .expo-card {
+            height: 100%;
+            background: #ffffff;
+            border: 1px solid #ebe8f8;
+            border-radius: 16px;
+            padding: 20px 18px;
+            text-align: center;
+            box-shadow: 0 10px 24px rgba(13, 23, 58, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            min-height: 150px;
+        }
+
+        .upcoming-exhibitions-section .expo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 30px rgba(111, 44, 255, 0.14);
+        }
+
+        .upcoming-exhibitions-section .expo-logo {
+            height: 58px;
+            width: 100%;
+            max-width: 230px;
+            object-fit: contain;
+            margin-bottom: 0;
+        }
+
+        .upcoming-exhibitions-section .expo-card.logo-lg .expo-logo {
+            height: 74px;
+            max-width: 280px;
+        }
+
+        .upcoming-exhibitions-section .expo-card.logo-india-warehousing .expo-logo {
+            height: 82px;
+            max-width: 300px;
+        }
+
+        .upcoming-exhibitions-section .expo-card h5 {
+            font-size: 18px;
+            line-height: 1.3;
+            margin-bottom: 0;
+        }
+
+        .upcoming-exhibitions-section .expo-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #5e6071;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 767px) {
+            .upcoming-exhibitions-section {
+                padding: 70px 0 50px;
+            }
         }
 
         /* Gallery Section Layout Tweaks */
@@ -342,60 +691,60 @@
             padding: 20px 0;
         }
 
-        /* Our Process Section: Reduced height and centered hover effect */
+        /* Our Process Section: cleaner card grid with consistent heights */
+        .speakers-section-two {
+            padding: 12px 0 0 !important;
+        }
+
         .speakers-section-two .speaker-block-two {
-            min-height: 500px !important;
+            min-height: 420px !important;
+            margin-bottom: 22px;
         }
 
         .speaker-block-two .inner-box .image img {
-            height: 500px !important;
+            height: 420px !important;
             width: 100% !important;
             object-fit: cover !important;
+            transition: transform 0.45s ease !important;
         }
 
         .speaker-block-two .inner-box .content {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            align-items: center !important;
-            text-align: center !important;
-            background: rgba(21, 0, 54, 0.9) !important;
-            /* Rich dark overlay */
-            padding: 30px !important;
-            transform: scale(0.95);
-            transition: all 0.4s ease-in-out !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-            padding-left: 30px !important;
-            /* Resetting bootstrap padding */
-            padding-bottom: 30px !important;
+            left: 14px !important;
+            right: 14px !important;
+            bottom: 14px !important;
+            top: auto !important;
+            display: block !important;
+            text-align: left !important;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(24, 14, 52, 0.5) 100%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+            border-radius: 14px;
+            padding: 16px 16px 14px !important;
+            transform: none !important;
+            transition: background 0.3s ease !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
 
         .speaker-block-two:hover .inner-box .content {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: scale(1) !important;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(50, 20, 110, 0.56) 100%) !important;
         }
 
         .speaker-block-two .info-box {
             padding: 0 !important;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .speaker-block-two .step-label {
-            font-size: 14px;
+            font-size: 11px;
             font-weight: 700;
-            color: #ff007a;
-            /* Exora Pink */
+            color: #ffd7ec;
             text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 2px;
+            margin-bottom: 6px;
+            letter-spacing: 1.4px;
             display: block;
         }
 
@@ -403,7 +752,7 @@
             font-size: 24px !important;
             font-weight: 800 !important;
             color: #fff !important;
-            margin-bottom: 10px !important;
+            margin-bottom: 5px !important;
             line-height: 1.2 !important;
         }
 
@@ -412,20 +761,47 @@
         }
 
         .speaker-block-two .inner-box .content .designation {
-            font-size: 14px !important;
-            color: #ff9d00 !important;
-            /* Exora Orange */
+            font-size: 12px !important;
+            color: #ffd27a !important;
             font-weight: 600 !important;
-            margin-bottom: 15px !important;
+            margin-bottom: 10px !important;
             text-transform: uppercase;
+            letter-spacing: 0.7px;
         }
 
         .speaker-block-two .description-text {
-            font-size: 14px;
-            line-height: 22px;
-            color: #ddd;
-            max-width: 250px;
-            margin: 0 auto;
+            font-size: 13px;
+            line-height: 1.45;
+            color: #f1f1f7;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .speakers-section-two .content-column .inner-column {
+            min-height: 460px !important;
+            padding: 24px 20px 24px 30px !important;
+        }
+
+        .speakers-section-two .content-column .sec-title h2 {
+            font-size: 46px !important;
+            line-height: 1.04 !important;
+            margin-bottom: 12px !important;
+        }
+
+        .speakers-section-two .content-column .sec-title .text {
+            font-size: 17px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 16px !important;
+        }
+
+        .speakers-section-two .content-column .btn-box .theme-btn {
+            min-height: 46px !important;
+            padding: 9px 16px !important;
+            font-size: 13px !important;
+        }
+
+        .speakers-section-two .content-column .btn-box .theme-btn .btn-title {
+            font-size: 12px !important;
         }
 
         /* Button Icon Visibility & Style */
@@ -450,14 +826,74 @@
 
         /* Speaker Block Glow on Hover */
         .speaker-block-two .inner-box {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-radius: 4px;
+            box-shadow: 0 12px 28px rgba(8, 12, 36, 0.22);
+            border-radius: 16px;
             overflow: hidden;
+            transform: translateY(0);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+        }
+
+        .speaker-block-two .inner-box::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 26px 26px;
+            opacity: 0.16;
+            z-index: 1;
+            transition: opacity 0.3s ease;
         }
 
 
         .speaker-block-two:hover .inner-box {
-            box-shadow: 0 15px 45px rgba(255, 0, 122, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 18px 34px rgba(111, 44, 255, 0.24);
+        }
+
+        .speaker-block-two:hover .inner-box .image img {
+            transform: scale(1.05);
+        }
+
+        .speaker-block-two:hover .inner-box::before {
+            opacity: 0.22;
+        }
+
+        @media (max-width: 1199px) {
+            .speakers-section-two .content-column .sec-title h2 {
+                font-size: 38px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .speakers-section-two {
+                padding: 0 !important;
+            }
+
+            .speakers-section-two .speaker-block-two,
+            .speaker-block-two .inner-box .image img,
+            .speakers-section-two .content-column .inner-column {
+                min-height: 330px !important;
+                height: 330px !important;
+            }
+
+            .speaker-block-two .inner-box .content {
+                left: 10px !important;
+                right: 10px !important;
+                bottom: 10px !important;
+                padding: 12px 12px 11px !important;
+            }
+
+            .speakers-section-two .content-column .sec-title h2 {
+                font-size: 30px !important;
+                line-height: 1.1 !important;
+            }
+
+            .speakers-section-two .content-column .sec-title .text {
+                font-size: 16px !important;
+            }
         }
 
         /* Portfolio Tabs Fixes */
@@ -895,14 +1331,14 @@
                     <div class="inner-box">
                         <ul class="contact-list">
                             <li><span class="bold">Address:</span> MSX Tower II, Alpha I, Greater Noida 201310</li>
-                            <li><span class="bold">Phone:</span> <a href="tel:+919667902737">+91 9667902737</a> | <a href="tel:+918882489806">+91 8882489806</a></li>
+                            <li><span class="bold">Phone:</span> <a href="tel:+919311257132">+91 9311257132</a> | <a href="tel:+919667902737">+91 9667902737</a> | <a href="tel:+918882489806">+91 8882489806</a></li>
                         </ul>
                         <ul class="social-icon">
-                            <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i
+                            <li><a href="https://www.facebook.com/share/1B9HM3FFb9/" target="_blank"><i
                                         class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i
+                            <li><a href="https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==" target="_blank"><i
                                         class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i
+                            <li><a href="https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank"><i
                                         class="fab fa-linkedin-in"></i></a></li>
                             <li><a href="https://wa.me/919667902737" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </li>
@@ -983,12 +1419,12 @@
                         <li>
                             <i class="icon fas fa-phone-alt"></i>
                             <span class="title">Call Now</span>
-                            <div class="text"><a href="tel:+919667902737">+91 9667902737</a><br><a href="tel:+918882489806">+91 8882489806</a></div>
+                            <div class="text"><a href="tel:+919311257132">+91 9311257132</a><br><a href="tel:+919667902737">+91 9667902737</a><br><a href="tel:+918882489806">+91 8882489806</a></div>
                         </li>
                         <li>
                             <i class="icon fas fa-envelope"></i>
                             <span class="title">Send Email</span>
-                            <div class="text"><a href="mailto:info@exoraambiance.com">info@exoraambiance.com</a></div>
+                            <div class="text"><a href="mailto:info@exoraambiance.com">info@exoraambiance.com</a><br><a href="mailto:abdul@exoraambaine.com">abdul@exoraambaine.com</a><br><a href="mailto:neha@exoraambiance.com">neha@exoraambiance.com</a></div>
                         </li>
                         <li>
                             <i class="icon fas fa-map-marker-alt"></i>
@@ -999,11 +1435,11 @@
 
 
                     <ul class="social-links">
-                        <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i
+                        <li><a href="https://www.facebook.com/share/1B9HM3FFb9/" target="_blank"><i
                                     class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i
+                        <li><a href="https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==" target="_blank"><i
                                     class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i
+                        <li><a href="https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank"><i
                                     class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="https://wa.me/919667902737" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </li>
@@ -1087,12 +1523,12 @@
                     <li>
                         <i class="icon fas fa-phone-alt"></i>
                         <span class="title">Call Now</span>
-                        <div class="text"><a href="tel:+919667902737">+91 9667902737</a><br><a href="tel:+918882489806">+91 8882489806</a></div>
+                        <div class="text"><a href="tel:+919311257132">+91 9311257132</a><br><a href="tel:+919667902737">+91 9667902737</a><br><a href="tel:+918882489806">+91 8882489806</a></div>
                     </li>
                     <li>
                         <i class="icon fas fa-envelope"></i>
                         <span class="title">Send Email</span>
-                        <div class="text"><a href="mailto:info@exoraambiance.com">info@exoraambiance.com</a></div>
+                        <div class="text"><a href="mailto:info@exoraambiance.com">info@exoraambiance.com</a><br><a href="mailto:abdul@exoraambaine.com">abdul@exoraambaine.com</a><br><a href="mailto:neha@exoraambiance.com">neha@exoraambiance.com</a></div>
                     </li>
                     <li>
                         <i class="icon fas fa-map-marker-alt"></i>
@@ -1102,11 +1538,11 @@
                 </ul>
 
                 <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i
+                    <li><a href="https://www.facebook.com/share/1B9HM3FFb9/" target="_blank"><i
                                 class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i
+                    <li><a href="https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==" target="_blank"><i
                                 class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i
+                    <li><a href="https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a></li>
                     <li><a href="https://wa.me/919667902737" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                 </ul>
@@ -1116,7 +1552,16 @@
 
         <!-- Banner Section Two -->
         <section class="banner-section-two" id="home">
-            <div class="bg bg-image" style="background-image: url(images/banner/new-hero.jpg);"></div>
+            <div class="bg hero-media-bg">
+                <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata"
+                    poster="section wise image/heroseciton image and vedio/hero secitn mobile image/WhatsApp Image 2026-03-30 at 11.58.08 PM.jpeg">
+                    <source src="section wise image/heroseciton image and vedio/hereo seciton desktop vedion/Gitex Dubai 2022 Exhibition Stand Videos._1080p.mp4"
+                        type="video/mp4">
+                </video>
+                <img id="heroMobileBg" class="hero-bg-mobile-image"
+                    src="section wise image/heroseciton image and vedio/hero secitn mobile image/WhatsApp Image 2026-03-30 at 11.58.08 PM.jpeg"
+                    alt="Exora Ambiance Hero Background">
+            </div>
             <div class="floating-title wow fadeIn" data-wow-delay="6500ms">Exora Ambiance</div>
             <div class="auto-container">
                 <div class="content-box">
@@ -1140,64 +1585,62 @@
                     <div class="date">5+ <span>Years of Excellence</span></div>
                 </div>
 
-                <!-- Hero Lead Capture Form -->
-                <div class="hero-quote-form wow fadeInRight" data-wow-delay="5500ms"
-                    style="position: absolute; right: 40px; top: 50%; transform: translateY(-50%); z-index: 10;">
-                    <div
-                        style="background: #ffffff; border-radius: 16px; padding: 35px 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); width: 340px; max-width: 90vw;">
-                        <h3
-                            style="font-size: 1.3rem; font-weight: 700; color: #222; text-align: center; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 0.5px;">
-                            Get a Callback</h3>
-                        <form id="hero-quote-form" style="display: flex; flex-direction: column; gap: 12px;">
-                            <input type="text" name="name" placeholder="Your Name" required
-                                style="width: 100%; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 25px; font-size: 14px; outline: none; transition: border-color 0.3s; background: #f9f9f9;">
-                            <input type="email" name="email" placeholder="Business Email" required
-                                style="width: 100%; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 25px; font-size: 14px; outline: none; transition: border-color 0.3s; background: #f9f9f9;">
-                            <input type="tel" name="phone" placeholder="Contact No." required
-                                style="width: 100%; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 25px; font-size: 14px; outline: none; transition: border-color 0.3s; background: #f9f9f9;">
-                            <textarea name="message" placeholder="Your Requirements" rows="3"
-                                style="width: 100%; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 16px; font-size: 14px; outline: none; transition: border-color 0.3s; background: #f9f9f9; resize: none; font-family: inherit;"></textarea>
-                            <button type="submit"
-                                style="width: 100%; padding: 14px; background: #ff9d00; color: #fff; border: none; border-radius: 25px; font-size: 15px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s;">GET
-                                A QUOTE</button>
-                            <div id="hero-form-message"
-                                style="display: none; padding: 10px; border-radius: 8px; font-size: 13px; text-align: center;">
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- End Banner Section Two -->
 
         <style>
-            @media (max-width: 1200px) {
-                .hero-quote-form {
-                    position: relative !important;
-                    right: auto !important;
-                    top: auto !important;
-                    transform: none !important;
-                    margin: 30px auto 0;
-                    display: flex;
-                    justify-content: center;
+            .banner-section-two .hero-media-bg {
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                overflow: hidden;
+            }
+
+            .banner-section-two .hero-bg-video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .banner-section-two .hero-bg-mobile-image {
+                display: none;
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+            @media (min-width: 992px) {
+                .banner-section-two {
+                    padding: 220px 0 140px !important;
+                }
+
+                .banner-section-two .hero-bg-video {
+                    object-position: center center;
                 }
             }
 
-            @media (max-width: 576px) {
-                .hero-quote-form>div {
-                    width: 100% !important;
-                    padding: 25px 20px !important;
+            @media (max-width: 767px) {
+                .banner-section-two {
+                    padding: 120px 0 82px !important;
+                    min-height: 78svh;
                 }
-            }
 
-            #hero-quote-form input:focus,
-            #hero-quote-form textarea:focus {
-                border-color: #ff9d00 !important;
-                background: #fff !important;
-            }
+                .banner-section-two .hero-bg-video {
+                    display: none;
+                }
 
-            #hero-quote-form button:hover {
-                background: #e88d00 !important;
+                .banner-section-two .hero-bg-mobile-image {
+                    display: block;
+                }
+
+                .banner-section-two .content-box {
+                    padding-top: 16px;
+                }
             }
         </style>
 
@@ -1211,8 +1654,11 @@
                     <div class="image-column col-xl-5 col-lg-12 col-md-12 col-sm-12">
                         <div class="inner-column">
                             <div class="icon-six"></div>
-                            <figure class="image overlay-anim reveal"><img src="../client-changes/images/WhatsApp%20Image%202026-03-26%20at%202.49.11%20PM.jpeg"
+                            <figure class="image overlay-anim reveal about-image-desktop-primary"><img src="section wise image/aboutus seciton iamge/for desktop iamges/ideate informat - Copy.jpeg"
                                     alt="Exora Ambiance Exhibition Stall Design"></figure>
+                            <figure class="image overlay-anim reveal about-image-mobile-slider"><img id="aboutMobileSliderImage"
+                                    src="section wise image/aboutus seciton iamge/for mobiel/anobita.jpg"
+                                    alt="Exora Ambiance About Section Mobile Slider"></figure>
                             <figure class="image two overlay-anim reveal"><img src="../client-changes/images/12_therm-x_industrial_equip_stall.jpg"
                                     alt="Therm-X Industrial Equipment Stall by Exora Ambiance"></figure>
                             <div class="author-box bounce-x">
@@ -1295,6 +1741,21 @@
             </div>
         </section>
         <!-- End About Section Two -->
+        <style>
+            .about-image-mobile-slider {
+                display: none;
+            }
+
+            @media (max-width: 767px) {
+                .about-image-desktop-primary {
+                    display: none !important;
+                }
+
+                .about-image-mobile-slider {
+                    display: block;
+                }
+            }
+        </style>
 
         <!-- Countdown Section -->
         <section class="countdown-section">
@@ -1307,7 +1768,7 @@
                         <div class="title-box col-xl-4 col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
                             <div class="sec-title light mb-0">
                                 <span class="sub-title">Upcoming Exhibition</span>
-                                <h2 class="text-reveal-anim">Next Exhibition <br> Coming Soon</h2>
+                                <h2 class="text-reveal-anim">Exhibition Calendar <br> &amp; Destinations</h2>
                             </div>
                         </div>
 
@@ -1369,20 +1830,85 @@
                             </div>
                         </div>
 
-                        <div class="btn-box col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                            <a href="#contact-form" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Send
-                                    Your
-                                    Requirement</span></a>
-                        </div>
                     </div>
-
-                    <figure class="image reveal bounce-x"><img src="images/Untitled.png" alt="Exhibition Stall"
+                    <figure class="image reveal bounce-x"><img src="section wise image/aboutus seciton iamge/for desktop iamges/ideate informat - Copy.jpeg" alt="Exhibition Stall"
                             loading="lazy">
                     </figure>
+                    <div class="countdown-image-cta">
+                        <a href="#contact-form" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Send Your
+                                Requirement</span></a>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- End Countdown Section -->
+
+        <!-- Upcoming Exhibition Grid -->
+        <section class="upcoming-exhibitions-section">
+            <div class="auto-container">
+                <div class="section-heading">
+                    <span class="sub-title">Our Next Project Destinations</span>
+                    <h2 class="text-reveal-anim">Events Where We Build Next</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="expo-card">
+                            <img class="expo-logo" src="images/event-logos/led-expo-fv256.png" alt="LED Expo logo" loading="lazy">
+                            <h5>LED Expo</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="expo-card">
+                            <img class="expo-logo" src="images/event-logos/elasia-fv256.png" alt="ELASIA logo" loading="lazy">
+                            <h5>ELASIA</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="expo-card">
+                            <img class="expo-logo" src="images/event-logos/logo-intra-logistics.png" alt="Intra Logistics and Warehousing logo" loading="lazy">
+                            <h5>Intra Logistics &amp; Warehousing</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="expo-card">
+                            <img class="expo-logo" src="images/event-logos/image.png" alt="Fresh India Show logo" loading="lazy">
+                            <h5>Fresh India Show</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="expo-card">
+                            <img class="expo-logo" src="images/event-logos/image%20copy%202.png" alt="Indomach logo" loading="lazy">
+                            <h5>Indomach</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="expo-card logo-lg">
+                            <img class="expo-logo" src="images/event-logos/image%20copy%204.png" alt="Pipes and Tube Expo logo" loading="lazy">
+                            <h5>Pipes and Tube Expo</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="expo-card">
+                            <img class="expo-logo" src="images/event-logos/logo-ihgf.png" alt="IHFF Delhi logo" loading="lazy">
+                            <h5>IHFF Delhi</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="expo-card logo-india-warehousing">
+                            <img class="expo-logo" src="images/event-logos/image%20copy%203.png" alt="India Warehousing logo" loading="lazy">
+                            <h5>India Warehousing</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="expo-card logo-lg">
+                            <img class="expo-logo" src="images/event-logos/logo-drone-expo.png" alt="Drone International Expo logo" loading="lazy">
+                            <h5>Drone International Expo</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Upcoming Exhibition Grid -->
 
 
 
@@ -1517,7 +2043,7 @@
                 <div class="row">
 
                     <!-- Blocks Column -->
-                    <div class="blocks-column col-xl-7 col-lg-12 col-md-12 col-sm-12">
+                    <div class="blocks-column col-xl-8 col-lg-12 col-md-12 col-sm-12">
                         <div class="inner-column">
 
                             <!-- Speaker Block -->
@@ -1526,7 +2052,7 @@
                                     <div class="shape-twenty"></div>
                                     <div class="image-box">
                                         <figure class="image"><a href="#gallery"><img
-                                                    src="images/resource/exhora-stall-04.jpg"
+                                                    src="section wise image/OUR PROCESS section/step 1.jpeg"
                                                     alt="Exora Concept Design Phase"></a></figure>
                                     </div>
                                     <div class="content">
@@ -1547,7 +2073,7 @@
                                     <div class="shape-twenty"></div>
                                     <div class="image-box">
                                         <figure class="image"><a href="#gallery"><img
-                                                    src="images/resource/exhora-stall-10.jpg"
+                                                    src="section wise image/OUR PROCESS section/step 2.jpeg"
                                                     alt="Exora Fabrication Phase"></a></figure>
                                     </div>
                                     <div class="content">
@@ -1568,7 +2094,7 @@
                                     <div class="shape-twenty"></div>
                                     <div class="image-box">
                                         <figure class="image"><a href="#gallery"><img
-                                                    src="images/resource/exhora-stall-13.jpg"
+                                                    src="section wise image/OUR PROCESS section/step3 e.jpeg"
                                                     alt="Exora Installation Phase"></a></figure>
                                     </div>
                                     <div class="content">
@@ -1586,7 +2112,7 @@
                     </div>
 
                     <!-- Content Column -->
-                    <div class="content-column col-xl-5 col-lg-12 col-md-12 col-sm-12 wow fadeInRight">
+                    <div class="content-column col-xl-4 col-lg-12 col-md-12 col-sm-12 wow fadeInRight">
                         <div class="inner-column">
                             <div class="sec-title light">
                                 <span class="sub-title">OUR PROCESS</span>
@@ -1877,7 +2403,7 @@
                                 <div class="carousel-slide active">
                                     <div class="slide-inner">
                                         <div class="project-image">
-                                            <img src="../client-changes/images/04_satte_feb_2026.jpg" alt="ABS Tour & Travel – SATTE 2026" loading="lazy">
+                                            <img src="section wise image/Ready to Start Your Project section/SATTE FEB 2026.jpeg" alt="ABS Tour & Travel – SATTE 2026" loading="lazy">
                                             <div class="image-overlay"></div>
                                         </div>
                                         <div class="project-info-card">
@@ -1900,7 +2426,7 @@
                                 <div class="carousel-slide">
                                     <div class="slide-inner">
                                         <div class="project-image">
-                                            <img src="../client-changes/images/05_abs_thai_stall.jpg" alt="Shilpkar – Gift World Expo 2025" loading="lazy">
+                                            <img src="section wise image/Ready to Start Your Project section/shilpkar.jpeg" alt="Shilpkar – Gift World Expo 2025" loading="lazy">
                                             <div class="image-overlay"></div>
                                         </div>
                                         <div class="project-info-card">
@@ -1919,57 +2445,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Slide 3 -->
-                                <div class="carousel-slide">
-                                    <div class="slide-inner">
-                                        <div class="project-image">
-                                            <img src="../client-changes/images/14_sng_marble_handicrafts_stall.jpg" alt="SNG Marbles – IHGF Exhibition" loading="lazy">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                        <div class="project-info-card">
-                                            <span class="project-category">Marble &amp; Handicrafts</span>
-                                            <h3 class="project-title">SNG Marbles</h3>
-                                            <p class="project-location">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                                Handicrafts Area, IHGF
-                                            </p>
-                                            <p class="project-description">Compact and elegant stall for repeat client SNG Marbles. Clean display and strong product visibility creating an impactful presence within limited space.</p>
-                                            <div class="project-meta">
-                                                <span class="meta-item">12 SQM</span>
-                                                <span class="meta-divider">&bull;</span>
-                                                <span class="meta-item">IHGF Exhibition</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Slide 4 -->
-                                <div class="carousel-slide">
-                                    <div class="slide-inner">
-                                        <div class="project-image">
-                                            <img src="../client-changes/images/15_sng_marble_wide_angle.jpg" alt="Dyuendey Pvt. Ltd. – Best Stall IHGF 2025" loading="lazy">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                        <div class="project-info-card">
-                                            <span class="project-category">&#127942; Best Stall Award</span>
-                                            <h3 class="project-title">Dyuendey Pvt. Ltd.</h3>
-                                            <p class="project-location">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                                IHGF &amp; Gift World Expo
-                                            </p>
-                                            <p class="project-description">Engaging and visually appealing stall design that played a key role in achieving the Best Stall Award at IHGF 2025. Continued successful collaboration with Dyuendey.</p>
-                                            <div class="project-meta">
-                                                <span class="meta-item">IHGF 2025</span>
-                                                <span class="meta-divider">&bull;</span>
-                                                <span class="meta-item">Best Stall Award</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Slide 5 -->
                                 <div class="carousel-slide">
                                     <div class="slide-inner">
                                         <div class="project-image">
-                                            <img src="../client-changes/images/06_travelwidus_stall_1.jpg" alt="High Power Textile – IHGF 2025" loading="lazy">
+                                            <img src="section wise image/Ready to Start Your Project section/hi power.jpeg" alt="High Power Textile – IHGF 2025" loading="lazy">
                                             <div class="image-overlay"></div>
                                         </div>
                                         <div class="project-info-card">
@@ -1992,7 +2472,7 @@
                                 <div class="carousel-slide">
                                     <div class="slide-inner">
                                         <div class="project-image">
-                                            <img src="../client-changes/images/12_therm-x_industrial_equip_stall.jpg" alt="Therm-x Industrial Equipments – IMTEX 2025" loading="lazy">
+                                            <img src="section wise image/Ready to Start Your Project section/Therm-x.jpeg" alt="Therm-x Industrial Equipments – IMTEX 2025" loading="lazy">
                                             <div class="image-overlay"></div>
                                         </div>
                                         <div class="project-info-card">
@@ -2011,34 +2491,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Slide 7 -->
-                                <div class="carousel-slide">
-                                    <div class="slide-inner">
-                                        <div class="project-image">
-                                            <img src="../client-changes/images/07_travelwidus_stall_2.jpg" alt="Zaibunco Industries – IIFF 2025" loading="lazy">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                        <div class="project-info-card">
-                                            <span class="project-category">Manufacturing</span>
-                                            <h3 class="project-title">Zaibunco Industries Pvt. Ltd.</h3>
-                                            <p class="project-location">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                                IIFF 2025
-                                            </p>
-                                            <p class="project-description">Strong presence at IIFF 2025 with balanced visual appeal and practical design. Structured layout enhancing branding and product display. Execution well appreciated by the client.</p>
-                                            <div class="project-meta">
-                                                <span class="meta-item">IIFF 2025</span>
-                                                <span class="meta-divider">&bull;</span>
-                                                <span class="meta-item">2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Slide 8 -->
                                 <div class="carousel-slide">
                                     <div class="slide-inner">
                                         <div class="project-image">
-                                            <img src="../client-changes/images/08_imtex_jan_2026.jpg" alt="Ideate Informatics – India Energy Week 2025" loading="lazy">
+                                            <img src="section wise image/Ready to Start Your Project section/ideate informat.jpeg" alt="Ideate Informatics – India Energy Week 2025" loading="lazy">
                                             <div class="image-overlay"></div>
                                         </div>
                                         <div class="project-info-card">
@@ -2053,52 +2510,6 @@
                                                 <span class="meta-item">India Energy Week</span>
                                                 <span class="meta-divider">&bull;</span>
                                                 <span class="meta-item">2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Slide 9 -->
-                                <div class="carousel-slide">
-                                    <div class="slide-inner">
-                                        <div class="project-image">
-                                            <img src="../client-changes/images/09_budan_coffee_stall_1.jpg" alt="Sopan Group – India Energy Week 2025" loading="lazy">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                        <div class="project-info-card">
-                                            <span class="project-category">Energy</span>
-                                            <h3 class="project-title">Sopan Group of Companies</h3>
-                                            <p class="project-location">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                                India Energy Week 2025
-                                            </p>
-                                            <p class="project-description">Modern stall with clean, well-structured layout. Strong branding and smooth visitor interaction. High attention to detail and quality finishing. Well appreciated by the client.</p>
-                                            <div class="project-meta">
-                                                <span class="meta-item">India Energy Week</span>
-                                                <span class="meta-divider">&bull;</span>
-                                                <span class="meta-item">2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Slide 10 -->
-                                <div class="carousel-slide">
-                                    <div class="slide-inner">
-                                        <div class="project-image">
-                                            <img src="../client-changes/images/10_bec_nov_2025.jpg" alt="East India Company – IHGF 2026" loading="lazy">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                        <div class="project-info-card">
-                                            <span class="project-category">Retail &amp; Heritage</span>
-                                            <h3 class="project-title">East India Company</h3>
-                                            <p class="project-location">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                                IHGF 2026
-                                            </p>
-                                            <p class="project-description">Refined design with practical layout planning. Clean and premium presentation with efficient planning for smooth visitor movement. Positive client feedback on successful execution.</p>
-                                            <div class="project-meta">
-                                                <span class="meta-item">IHGF 2026</span>
-                                                <span class="meta-divider">&bull;</span>
-                                                <span class="meta-item">2026</span>
                                             </div>
                                         </div>
                                     </div>
@@ -2122,11 +2533,6 @@
                         <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
                         <button class="indicator" data-slide="3" aria-label="Go to slide 4"></button>
                         <button class="indicator" data-slide="4" aria-label="Go to slide 5"></button>
-                        <button class="indicator" data-slide="5" aria-label="Go to slide 6"></button>
-                        <button class="indicator" data-slide="6" aria-label="Go to slide 7"></button>
-                        <button class="indicator" data-slide="7" aria-label="Go to slide 8"></button>
-                        <button class="indicator" data-slide="8" aria-label="Go to slide 9"></button>
-                        <button class="indicator" data-slide="9" aria-label="Go to slide 10"></button>
                     </div>
                 </div>
 
@@ -2898,6 +3304,8 @@
                                         style="color: #333; font-size: 14px; display: block; margin-bottom: 3px; transition: color 0.3s; text-decoration: none;">info@exoraambiance.com</a>
                                     <a href="mailto:neha@exoraambiance.com"
                                         style="color: #333; font-size: 14px; display: block; transition: color 0.3s; text-decoration: none;">neha@exoraambiance.com</a>
+                                    <a href="mailto:abdul@exoraambaine.com"
+                                        style="color: #333; font-size: 14px; display: block; transition: color 0.3s; text-decoration: none;">abdul@exoraambaine.com</a>
                                 </div>
                             </div>
 
@@ -2917,6 +3325,8 @@
                                     <a href="tel:+918882489806"
                                         style="color: #333; font-size: 14px; display: block; transition: color 0.3s; text-decoration: none;">+91
                                         88824 89806</a>
+                                    <a href="tel:+919311257132"
+                                        style="color: #333; font-size: 14px; display: block; margin-top: 4px; transition: color 0.3s; text-decoration: none;">+91 93112 57132</a>
                                 </div>
                             </div>
 
@@ -2935,6 +3345,8 @@
                                         style="color: #333; font-size: 14px; display: block; transition: color 0.3s; text-decoration: none;">+91 96679 02737 (Neha Singh)</a>
                                     <a href="https://wa.me/918882489806" target="_blank"
                                         style="color: #333; font-size: 14px; display: block; margin-top: 4px; transition: color 0.3s; text-decoration: none;">+91 88824 89806</a>
+                                    <a href="https://wa.me/919311257132" target="_blank"
+                                        style="color: #333; font-size: 14px; display: block; margin-top: 4px; transition: color 0.3s; text-decoration: none;">+91 93112 57132</a>
                                 </div>
                             </div>
 
@@ -2959,15 +3371,15 @@
                                     style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin: 0 0 12px 0; font-weight: 600;">
                                     Follow Us</h5>
                                 <div style="display: flex; gap: 10px;">
-                                    <a href="https://www.instagram.com/exhora_ambiance/" target="_blank"
+                                    <a href="https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==" target="_blank"
                                         style="width: 38px; height: 38px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s; color: #ff9d00; text-decoration: none;">
                                         <i class="fab fa-instagram" style="font-size: 18px;"></i>
                                     </a>
-                                    <a href="https://www.facebook.com/exoraambiance" target="_blank"
+                                    <a href="https://www.facebook.com/share/1B9HM3FFb9/" target="_blank"
                                         style="width: 38px; height: 38px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s; color: #ff9d00; text-decoration: none;">
                                         <i class="fab fa-facebook-f" style="font-size: 18px;"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/company/exora-ambiance/" target="_blank"
+                                    <a href="https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank"
                                         style="width: 38px; height: 38px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s; color: #ff9d00; text-decoration: none;">
                                         <i class="fab fa-linkedin-in" style="font-size: 18px;"></i>
                                     </a>
@@ -3001,7 +3413,7 @@
                             </div>
                             <p style="color: #666; margin: 0 0 26px 0; font-size: 13.5px; display: flex; align-items: center; gap: 7px;">
                                 <i class="fas fa-clock" style="color: #ff9d00;"></i>
-                                Our team will contact you within <strong style="color: #222;">&nbsp;4 hours</strong>.
+                                Our team will contact you within <strong style="color: #222;">&nbsp;24 hours</strong>.
                             </p>
 
                             <form id="exhoraContactForm" style="display: flex; flex-direction: column; gap: 18px;">
@@ -3280,58 +3692,6 @@
                 })();
             </script>
 
-            <!-- Hero Quote Form Handler -->
-            <script>
-                (function () {
-                    const heroForm = document.getElementById('hero-quote-form');
-                    const heroMsg = document.getElementById('hero-form-message');
-                    if (!heroForm) return;
-
-                    heroForm.addEventListener('submit', function (e) {
-                        e.preventDefault();
-                        const btn = heroForm.querySelector('button[type="submit"]');
-                        const originalText = btn.textContent;
-                        btn.textContent = 'Sending...';
-                        btn.style.pointerEvents = 'none';
-
-                        const formData = new FormData(heroForm);
-                        const data = Object.fromEntries(formData.entries());
-
-                        fetch('https://webstarts.in/api/contact', {
-                            method: 'POST',
-                            body: JSON.stringify(data),
-                            headers: {
-                                'Accept': 'application/json',
-                                'Content-Type': 'application/json'
-                            }
-                        })
-                            .then(function (response) {
-                                heroMsg.style.display = 'block';
-                                if (response.ok) {
-                                    heroMsg.style.background = '#daf5d7';
-                                    heroMsg.style.color = '#333';
-                                    heroMsg.textContent = 'Thank you! We will contact you soon.';
-                                    heroForm.reset();
-                                } else {
-                                    heroMsg.style.background = '#f8d7da';
-                                    heroMsg.style.color = '#721c24';
-                                    heroMsg.textContent = 'Something went wrong. Please try again.';
-                                }
-                            })
-                            .catch(function () {
-                                heroMsg.style.display = 'block';
-                                heroMsg.style.background = '#f8d7da';
-                                heroMsg.style.color = '#721c24';
-                                heroMsg.textContent = 'Something went wrong. Please try again.';
-                            })
-                            .finally(function () {
-                                btn.textContent = originalText;
-                                btn.style.pointerEvents = 'auto';
-                                setTimeout(function () { heroMsg.style.display = 'none'; }, 5000);
-                            });
-                    });
-                })();
-            </script>
         </section>
         <!-- End Contact Section -->
 
@@ -3476,15 +3836,18 @@
                                             style="display: block; margin-bottom: 5px; color: #ffffff;">info@Exoraambiance.com</a>
                                         <a href="mailto:neha@Exoraambiance.com"
                                             style="display: block; margin-bottom: 5px; color: #ffffff;">neha@Exoraambiance.com</a>
+                                        <a href="mailto:abdul@exoraambaine.com"
+                                            style="display: block; margin-bottom: 5px; color: #ffffff;">abdul@exoraambaine.com</a>
                                         <a href="tel:+919667902737" style="display: block; margin-bottom: 5px; color: #ffffff;">+91 96679 02737 (Neha Singh)</a>
-                                        <a href="tel:+918882489806" style="display: block; color: #ffffff;">+91 88824 89806</a>
+                                        <a href="tel:+918882489806" style="display: block; margin-bottom: 5px; color: #ffffff;">+91 88824 89806</a>
+                                        <a href="tel:+919311257132" style="display: block; color: #ffffff;">+91 93112 57132</a>
                                     </div>
                                     <ul class="social-icon-two light" style="margin-top: 20px;">
-                                        <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i
+                                        <li><a href="https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==" target="_blank"><i
                                                     class="fab fa-instagram"></i></a></li>
-                                        <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i
+                                        <li><a href="https://www.facebook.com/share/1B9HM3FFb9/" target="_blank"><i
                                                     class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/company/Exora-ambiance/"
+                                        <li><a href="https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android"
                                                 target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                         <li><a href="https://wa.me/919667902737" target="_blank"><i
                                                     class="fab fa-whatsapp"></i></a></li>
@@ -3580,12 +3943,12 @@
 
         <div class="page-social-icon-box">
             <ul class="social-icon-three">
-                <li><a href="https://www.instagram.com/Exora_ambiance/" target="_blank"><i
+                <li><a href="https://www.instagram.com/exora_exhibits?igsh=MWp6aWM4djNyeTViMA==" target="_blank"><i
                             class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/Exoraambiance" target="_blank"><i
+                <li><a href="https://www.facebook.com/share/1B9HM3FFb9/" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
                 </li>
-                <li><a href="https://www.linkedin.com/company/Exora-ambiance/" target="_blank"><i
+                <li><a href="https://www.linkedin.com/in/neha-singh-69b9013a7?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank"><i
                             class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="https://wa.me/919667902737" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
@@ -3622,6 +3985,125 @@
 
     <!-- ===== POPUP + SLIDER SCRIPTS ===== -->
     <script>
+        (function() {
+            var heroMobileBg = document.getElementById('heroMobileBg');
+            if (!heroMobileBg) return;
+
+            var heroMobileImages = [
+                'section wise image/heroseciton image and vedio/hero secitn mobile image/WhatsApp Image 2026-03-30 at 11.58.08 PM.jpeg',
+                'section wise image/heroseciton image and vedio/hero secitn mobile image/WhatsApp Image 2026-03-30 at 11.58.09 PM.jpeg'
+            ];
+
+            var currentHeroImageIndex = 0;
+            var heroIntervalId = null;
+            var heroMobileQuery = window.matchMedia('(max-width: 767px)');
+
+            function setHeroMobileImage(index) {
+                heroMobileBg.src = heroMobileImages[index];
+            }
+
+            function showNextHeroImage() {
+                currentHeroImageIndex = (currentHeroImageIndex + 1) % heroMobileImages.length;
+                setHeroMobileImage(currentHeroImageIndex);
+            }
+
+            function startHeroSlider() {
+                if (heroIntervalId || !heroMobileQuery.matches || heroMobileImages.length < 2) return;
+                heroIntervalId = setInterval(showNextHeroImage, 3000);
+            }
+
+            function stopHeroSlider() {
+                if (!heroIntervalId) return;
+                clearInterval(heroIntervalId);
+                heroIntervalId = null;
+            }
+
+            function handleHeroViewportChange() {
+                if (heroMobileQuery.matches) {
+                    currentHeroImageIndex = 0;
+                    setHeroMobileImage(currentHeroImageIndex);
+                    startHeroSlider();
+                } else {
+                    stopHeroSlider();
+                }
+            }
+
+            handleHeroViewportChange();
+
+            if (heroMobileQuery.addEventListener) {
+                heroMobileQuery.addEventListener('change', handleHeroViewportChange);
+            } else if (heroMobileQuery.addListener) {
+                heroMobileQuery.addListener(handleHeroViewportChange);
+            }
+
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    stopHeroSlider();
+                } else {
+                    handleHeroViewportChange();
+                }
+            });
+        })();
+
+        (function() {
+            var mobileImage = document.getElementById('aboutMobileSliderImage');
+            if (!mobileImage) return;
+
+            var mobileImages = [
+                'section wise image/aboutus seciton iamge/for mobiel/anobita.jpg',
+                'section wise image/aboutus seciton iamge/for mobiel/hi power.jpeg',
+                'section wise image/aboutus seciton iamge/for mobiel/ideate informat.jpeg',
+                'section wise image/aboutus seciton iamge/for mobiel/shilpkar.jpeg',
+                'section wise image/aboutus seciton iamge/for mobiel/Therm-x.jpeg'
+            ];
+
+            var currentIndex = 0;
+            var intervalId = null;
+            var mobileQuery = window.matchMedia('(max-width: 767px)');
+
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % mobileImages.length;
+                mobileImage.src = mobileImages[currentIndex];
+            }
+
+            function startSlider() {
+                if (intervalId || !mobileQuery.matches || mobileImages.length < 2) return;
+                intervalId = setInterval(showNextImage, 2500);
+            }
+
+            function stopSlider() {
+                if (!intervalId) return;
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+
+            function handleViewportChange() {
+                if (mobileQuery.matches) {
+                    currentIndex = 0;
+                    mobileImage.src = mobileImages[currentIndex];
+                    startSlider();
+                } else {
+                    stopSlider();
+                }
+            }
+
+            handleViewportChange();
+
+            if (mobileQuery.addEventListener) {
+                mobileQuery.addEventListener('change', handleViewportChange);
+            } else if (mobileQuery.addListener) {
+                mobileQuery.addListener(handleViewportChange);
+            }
+
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    stopSlider();
+                } else {
+                    handleViewportChange();
+                }
+            });
+        })();
+
         // First-Visit Popup Logic
         (function() {
             var overlay = document.getElementById('exora-popup-overlay');

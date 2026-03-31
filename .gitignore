@@ -6,3 +6,4 @@ temp_workspace/
 Thumbs.db
 node_modules/
 *.log
+*.mp4
