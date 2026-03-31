@@ -711,7 +711,7 @@
 		if (tagetedElementContainer?.length) {
 			tagetedElementContainer.forEach(e => {
 				var t = new SplitType(e, {
-					types: "chars",
+					types: "words, chars",
 				});
 				gsap.from(t.chars, {
 					scrollTrigger: {
