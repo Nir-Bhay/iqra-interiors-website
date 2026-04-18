@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trait": "static",
+  "rewrites": [
+    { "source": "/", "destination": "/Exhora_BACKUP/index.html" },
+    { "source": "/(.*)", "destination": "/Exhora_BACKUP/$1" }
+  ]
+}
