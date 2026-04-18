@@ -123,3 +123,9 @@ textarea:focus {
 .main-footer .bg {
   background-image: none !important;
 }
+
+/* ── Our Process section background override ─────────────────────── */
+.speakers-section-two {
+  background-color: var(--theme-color4) !important;
+}
+

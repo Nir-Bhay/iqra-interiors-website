@@ -164,11 +164,16 @@
             .logo-box img,
             .nav-logo img,
             .logo img {
-                max-height: 60px !important;
+                height: clamp(26px, 8vw, 45px) !important;
+                width: auto !important;
+                max-height: 100% !important;
+                max-width: calc(100vw - 75px) !important;
+                object-fit: contain !important;
             }
 
             .hidden-bar .logo-box img {
-                max-height: 80px !important;
+                max-height: 60px !important;
+                max-width: 70vw !important;
             }
         }
 
@@ -744,12 +749,18 @@
 
         /* Our Process Section: cleaner card grid with consistent heights */
         .speakers-section-two {
-            padding: 12px 0 0 !important;
+            /* padding: 80px 0 !important; */
+        }
+
+        .speakers-section-two .outer-box .row {
+            display: flex;
+            align-items: center !important;
         }
 
         .speakers-section-two .speaker-block-two {
             min-height: 420px !important;
-            margin-bottom: 22px;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
 
         .speaker-block-two .inner-box .image img {
@@ -829,8 +840,11 @@
         }
 
         .speakers-section-two .content-column .inner-column {
-            min-height: 460px !important;
+            min-height: 420px !important;
             padding: 24px 20px 24px 30px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .speakers-section-two .content-column .sec-title h2 {
@@ -920,7 +934,7 @@
 
         @media (max-width: 767px) {
             .speakers-section-two {
-                padding: 0 !important;
+                padding: 60px 0 !important;
             }
 
             .speakers-section-two .speaker-block-two,
