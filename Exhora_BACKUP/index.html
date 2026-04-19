@@ -111,13 +111,18 @@
     <title>Milestone Exhibition studio | Exhibition Stall Design &amp; Fabrication</title>
     <!-- Favicon Icon -->
     <link href="images/milestone/FullLogo_Transparent_NoBuffer.png" rel="shortcut icon" type="image/png" />
-    <!-- Stylesheets -->
+    <!-- Critical stylesheets — render-blocking intentionally -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/master.css" rel="stylesheet" />
-    <link href="css/process-section.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <!--Color Switcher Mockup-->
-    <link href="css/color-switcher-design.css" rel="stylesheet" />
+    <!-- Non-critical CSS deferred to avoid blocking first paint -->
+    <link href="css/process-section.css" media="print" onload="this.media='all'" rel="stylesheet" />
+    <link href="style.css" media="print" onload="this.media='all'" rel="stylesheet" />
+    <link href="css/color-switcher-design.css" media="print" onload="this.media='all'" rel="stylesheet" />
+    <noscript>
+        <link href="css/process-section.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <link href="css/color-switcher-design.css" rel="stylesheet" />
+    </noscript>
     <!-- Milestone Custom Overrides -->
     <style>
         /* Headings Text Wrap overrides */
@@ -2077,28 +2082,28 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Row 2 (Scrolling Right) -->
+                        <!-- Row 2 (Scrolling Right) — videos lazy-loaded on scroll -->
                         <div class="row-2" style="margin-top: 20px;">
-                            <div class="Milestone-scroll-track">
+                            <div class="Milestone-scroll-track" id="msVideoGallery">
                                 <div class="Milestone-scroll-row">
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_1.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_2.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_3.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2170.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_4.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2171.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_5.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2172.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_6.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2418.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_7.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2424.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_8.mp4" type="video/mp4"></video></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><img alt="Exhibition video 1" class="ms-vid-poster" data-src="videos/milestone/video_1.mp4" decoding="async" loading="lazy" src="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><img alt="Exhibition video 2" class="ms-vid-poster" data-src="videos/milestone/video_2.mp4" decoding="async" loading="lazy" src="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><img alt="Exhibition video 3" class="ms-vid-poster" data-src="videos/milestone/video_3.mp4" decoding="async" loading="lazy" src="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><img alt="Exhibition video 4" class="ms-vid-poster" data-src="videos/milestone/video_4.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2170.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><img alt="Exhibition video 5" class="ms-vid-poster" data-src="videos/milestone/video_5.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2171.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><img alt="Exhibition video 6" class="ms-vid-poster" data-src="videos/milestone/video_6.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2172.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><img alt="Exhibition video 7" class="ms-vid-poster" data-src="videos/milestone/video_7.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2418.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><img alt="Exhibition video 8" class="ms-vid-poster" data-src="videos/milestone/video_8.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2424.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
                                 </div>
                                 <div class="Milestone-scroll-row" aria-hidden="true">
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_1.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_2.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_3.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2170.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_4.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2171.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_5.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2172.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_6.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2418.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_7.mp4" type="video/mp4"></video></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><video autoplay loop muted playsinline preload="metadata" poster="images/milestone/IMG_2424.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="videos/milestone/video_8.mp4" type="video/mp4"></video></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_1.mp4" decoding="async" loading="lazy" src="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_2.mp4" decoding="async" loading="lazy" src="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_3.mp4" decoding="async" loading="lazy" src="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_4.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2170.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_5.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2171.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_6.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2172.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_7.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2418.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_8.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2424.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -3231,6 +3236,63 @@
         });
     </script>
     <!-- ===== END POPUP + SLIDER SCRIPTS ===== -->
+    <!-- ===== PERFORMANCE: video lazy loader + play-icon overlay ===== -->
+    <style>
+        .ms-vid-card { position: relative; overflow: hidden; }
+        .ms-vid-card .ms-play-ic {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            width: 46px; height: 46px; border-radius: 50%;
+            background: rgba(255,255,255,0.88);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.22s ease, transform 0.22s ease;
+            pointer-events: none; z-index: 5;
+        }
+        .ms-vid-card .ms-play-ic svg { width: 18px; height: 18px; fill: #111; margin-left: 3px; }
+        .ms-vid-card:hover .ms-play-ic { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        .ms-vid-card video.ms-live { animation: ms-fi 0.4s ease; }
+        @keyframes ms-fi { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+    <script>
+    (function () {
+        /* 1. Inject play-icon overlays */
+        document.querySelectorAll('.ms-vid-card').forEach(function (c) {
+            var ic = document.createElement('div');
+            ic.className = 'ms-play-ic';
+            ic.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+            c.appendChild(ic);
+        });
+
+        /* 2. Intersection Observer: swap posters -> live videos on scroll */
+        var row = document.getElementById('msVideoGallery');
+        if (!row || !('IntersectionObserver' in window)) return;
+
+        var done = false;
+        var obs = new IntersectionObserver(function (entries) {
+            if (done || !entries[0].isIntersecting) return;
+            done = true;
+            obs.disconnect();
+            row.querySelectorAll('.ms-vid-poster').forEach(function (img) {
+                var src = img.getAttribute('data-src');
+                if (!src) return;
+                var v = document.createElement('video');
+                v.autoplay = true; v.loop = true; v.muted = true;
+                v.playsInline = true; v.preload = 'metadata';
+                v.className = 'ms-live';
+                v.style.cssText = img.style.cssText;
+                var s = document.createElement('source');
+                s.src = src; s.type = 'video/mp4';
+                v.appendChild(s);
+                img.parentNode.replaceChild(v, img);
+                v.load();
+                v.play().catch(function () {});
+            });
+        }, { rootMargin: '0px 0px 250px 0px', threshold: 0 });
+
+        obs.observe(row);
+    }());
+    </script>
+    <!-- ===== END PERFORMANCE ===== -->
 </body>
 </head>
 
