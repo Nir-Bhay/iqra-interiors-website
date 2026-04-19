@@ -53,13 +53,9 @@ Tags:          event, conference, marketing, business
 39.  Main Footer CSS
 */
 @import url("animate.css");
-@import url("jquery.fancybox.min.css");
-@import url("linear.css");
-@import url("swipper.min.css");
 @import url("lightcase.css");
 @import url("fonts.css");
 @import url("fontawesome.css");
-@import url("flaticon.css");
 
 /***====================================================================
 # Global Variables CSS

@@ -9,7 +9,7 @@
     <!-- Resource Hints -->
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="dns-prefetch" />
-    <link as="image" href="images/background/5.jpg" rel="preload" />
+    <link as="image" fetchpriority="high" href="images/milestone/hero image.webp" rel="preload" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport" />
     <meta content="#3DCFA0" name="theme-color" />
@@ -114,15 +114,9 @@
     <!-- Critical stylesheets — render-blocking intentionally -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/master.css" rel="stylesheet" />
-    <!-- Non-critical CSS deferred to avoid blocking first paint -->
     <link href="css/process-section.css" media="print" onload="this.media='all'" rel="stylesheet" />
     <link href="style.css" media="print" onload="this.media='all'" rel="stylesheet" />
-    <link href="css/color-switcher-design.css" media="print" onload="this.media='all'" rel="stylesheet" />
-    <noscript>
-        <link href="css/process-section.css" rel="stylesheet" />
-        <link href="style.css" rel="stylesheet" />
-        <link href="css/color-switcher-design.css" rel="stylesheet" />
-    </noscript>
+    <!-- Non-critical CSS deferred to avoid blocking first paint -->
     <!-- Milestone Custom Overrides -->
     <style>
         /* Headings Text Wrap overrides */
@@ -1268,7 +1262,7 @@
             right: 20px;
             width: 120px;
             height: 40px;
-            background: url("images/milestone/FullLogo_Transparent_NoBuffer.png") no-repeat center;
+            background: url("images/milestone/FullLogo_Transparent_NoBuffer.webp") no-repeat center;
             background-size: contain;
             opacity: 0.6;
             z-index: 1000;
@@ -1380,6 +1374,7 @@
         }
     </style>
 
+</head>
 <body>
     <!-- ===== FIRST-VISIT POPUP CONTACT FORM ===== -->
     <div id="Milestone-Exhibition-studio-popup-overlay"
@@ -1441,7 +1436,7 @@
                         <ul class="contact-list">
                             <li><span class="bold">Address: </span>Doddaramanna Circle, Nagasandra Post, Bengaluru
                                 560073</li>
-                            <li><span class="bold">Phone: </span><a href="tel:+919999404645">+91 99994 04645</a></li>
+                                                        <li><span class="bold">Phone: </span><a href="tel:+919999404645">+91 99994 04645</a> <a href="https://wa.me/919999404645" target="_blank" title="Chat on WhatsApp" style="margin-left: 10px; color: #25D366; font-size: 1.2em; vertical-align: middle;"><i class="fab fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -1453,9 +1448,9 @@
                         <!-- Logo Box -->
                         <div class="logo-box">
                             <div class="logo"><a href="index-2.html"><img alt="Milestone-Exhibition-studio Logo"
-                                        src="images/milestone/FullLogo_Transparent_NoBuffer.png"
+                                        src="images/milestone/FullLogo_Transparent_NoBuffer.webp"
                                         style="max-height:70px;width:auto;"
-                                        title="Milestone-Exhibition-studio - Exhibition Stall Fabrication" /></a></div>
+                                        title="Milestone-Exhibition-studio - Exhibition Stall Fabrication" width="640" height="462" loading="eager" decoding="async" /></a></div>
                         </div>
                         <!-- Header Navbar -->
                         <div class="header-navbar">
@@ -1495,10 +1490,10 @@
                     <div class="upper-box">
                         <div class="logo-box">
                             <div class="nav-logo light"><a href="index.html"><img alt="Milestone-Exhibition-studio Logo"
-                                        loading="lazy" src="images/milestone/FullLogo_Transparent_NoBuffer.png" /></a>
+                                        loading="eager" src="images/milestone/FullLogo_Transparent_NoBuffer.webp" width="640" height="462" decoding="async" /></a>
                             </div>
                             <div class="nav-logo dark"><a href="index.html"><img alt="Milestone-Exhibition-studio Logo"
-                                        loading="lazy" src="images/milestone/FullLogo_Transparent_NoBuffer.png" /></a>
+                                        loading="eager" src="images/milestone/FullLogo_Transparent_NoBuffer.webp" width="640" height="462" decoding="async" /></a>
                             </div>
                         </div>
                         <div class="close-btn"><i class="icon fa fa-times"></i></div>
@@ -1542,9 +1537,9 @@
                         <!--Logo-->
                         <div class="logo-box">
                             <div class="logo light"><a href="index.html" title=""><img alt="Logo"
-                                        src="images/milestone/FullLogo_Transparent_NoBuffer.png" /></a></div>
+                                        src="images/milestone/FullLogo_Transparent_NoBuffer.webp" width="640" height="462" loading="eager" decoding="async" /></a></div>
                             <div class="logo dark"><a href="index.html" title=""><img alt="Logo"
-                                        src="images/milestone/FullLogo_Transparent_NoBuffer.png" /></a></div>
+                                        src="images/milestone/FullLogo_Transparent_NoBuffer.webp" width="640" height="462" loading="eager" decoding="async" /></a></div>
                         </div>
                         <!--Right Col-->
                         <div class="nav-outer">
@@ -1572,10 +1567,10 @@
                 <div class="upper-box">
                     <div class="logo-box">
                         <div class="nav-logo light"><a href="index.html"><img alt="Milestone Exhibition studio Logo"
-                                    loading="lazy" src="images/milestone/FullLogo_Transparent_NoBuffer.png" /></a>
+                                    loading="eager" src="images/milestone/FullLogo_Transparent_NoBuffer.webp" width="640" height="462" decoding="async" /></a>
                         </div>
                         <div class="nav-logo dark"><a href="index.html"><img alt="Milestone Exhibition studio Logo"
-                                    loading="lazy" src="images/milestone/FullLogo_Transparent_NoBuffer.png" /></a></div>
+                                    loading="eager" src="images/milestone/FullLogo_Transparent_NoBuffer.webp" width="640" height="462" decoding="async" /></a></div>
                     </div>
                     <div class="close-btn"><i class="icon fa fa-times"></i></div>
                 </div>
@@ -1605,8 +1600,8 @@
         <!-- Banner Section Two -->
         <section class="banner-section-two d-flex align-items-center" id="home" style="min-height: 100vh;">
             <div class="bg hero-media-bg">
-                <img alt="Milestone-Exhibition-studio Hero" src="images/milestone/hero image.png"
-                    style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:0;" />
+                <img alt="Milestone-Exhibition-studio Hero" src="images/milestone/hero image.webp"
+                    style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:0;" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async" />
             </div>
             <div class="auto-container w-100">
                 <div class="content-box">
@@ -1719,13 +1714,13 @@
                             <div class="icon-six"></div>
                             <figure class="image overlay-anim reveal about-image-desktop-primary"><img
                                     alt="boss hero image"
-                                    src="images/milestone/IMG_2418.jpg" /></figure>
+                                    src="images/milestone/IMG_2418.webp" width="1600" height="1200" loading="lazy" decoding="async" /></figure>
                             <figure class="image overlay-anim reveal about-image-mobile-slider"><img
                                     alt="boss hero image"
-                                    id="aboutMobileSliderImage" src="images/milestone/IMG_2418.jpg" /></figure>
+                                    id="aboutMobileSliderImage" src="images/milestone/IMG_2418.webp" width="1600" height="1200" loading="lazy" decoding="async" /></figure>
                             <figure class="image two overlay-anim reveal"><img
                                     alt="Therm-X Industrial Equipment Stall by Milestone-Exhibition-studio"
-                                    src="images/milestone/IMG_2170.jpg" /></figure>
+                                    src="images/milestone/IMG_2170.webp" width="1600" height="1350" loading="lazy" decoding="async" /></figure>
                            
                         </div>
                     </div>
@@ -1956,7 +1951,7 @@
                                     <div class="image-box">
                                         <figure class="image"><a href="#gallery"><img
                                                     alt="Milestone Concept Design Phase"
-                                                    src="images/milestone/concept_design.png" /></a></figure>
+                                                    src="images/milestone/concept_design.webp" width="960" height="960" loading="lazy" decoding="async" /></a></figure>
                                     </div>
                                     <div class="content">
                                         <div class="info-box">
@@ -1975,7 +1970,7 @@
                                     <div class="shape-twenty"></div>
                                     <div class="image-box">
                                         <figure class="image"><a href="#gallery"><img alt="Milestone Fabrication Phase"
-                                                    src="images/milestone/fabrication_production.png" /></a></figure>
+                                                    src="images/milestone/fabrication_production.webp" width="960" height="960" loading="lazy" decoding="async" /></a></figure>
                                     </div>
                                     <div class="content">
                                         <div class="info-box">
@@ -1994,7 +1989,7 @@
                                     <div class="shape-twenty"></div>
                                     <div class="image-box">
                                         <figure class="image"><a href="#gallery"><img alt="Milestone Installation Phase"
-                                                    src="images/milestone/IMG_2170.jpg" /></a></figure>
+                                                    src="images/milestone/IMG_2170.webp" width="1600" height="1350" loading="lazy" decoding="async" /></a></figure>
                                     </div>
                                     <div class="content">
                                         <div class="info-box">
@@ -2065,20 +2060,20 @@
                         <div class="row-1">
                             <div class="Milestone-scroll-track">
                                 <div class="Milestone-scroll-row">
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.jpeg"><img alt="Portfolio Image 1" loading="lazy" src="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.jpeg"><img alt="Portfolio Image 2" loading="lazy" src="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.jpeg"><img alt="Portfolio Image 3" loading="lazy" src="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.jpeg"><img alt="Portfolio Image 4" loading="lazy" src="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.jpeg"><img alt="Portfolio Image 5" loading="lazy" src="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.jpeg"><img alt="Portfolio Image 6" loading="lazy" src="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.jpeg" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.webp"><img alt="Portfolio Image 1" loading="lazy" src="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.webp"><img alt="Portfolio Image 2" loading="lazy" src="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.webp"><img alt="Portfolio Image 3" loading="lazy" src="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.webp"><img alt="Portfolio Image 4" loading="lazy" src="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.webp" width="1040" height="585" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.webp"><img alt="Portfolio Image 5" loading="lazy" src="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.webp" width="1600" height="900" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.webp"><img alt="Portfolio Image 6" loading="lazy" src="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.webp" width="1040" height="585" decoding="async" /></a></div>
                                 </div>
                                 <div class="Milestone-scroll-row" aria-hidden="true">
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.jpeg"><img alt="Portfolio Image 1" loading="lazy" src="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.jpeg"><img alt="Portfolio Image 2" loading="lazy" src="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.jpeg"><img alt="Portfolio Image 3" loading="lazy" src="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.jpeg"><img alt="Portfolio Image 4" loading="lazy" src="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.jpeg"><img alt="Portfolio Image 5" loading="lazy" src="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.jpeg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.jpeg"><img alt="Portfolio Image 6" loading="lazy" src="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.jpeg" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.webp"><img alt="Portfolio Image 1" loading="lazy" src="images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.webp"><img alt="Portfolio Image 2" loading="lazy" src="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.webp"><img alt="Portfolio Image 3" loading="lazy" src="images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.webp"><img alt="Portfolio Image 4" loading="lazy" src="images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.webp" width="1040" height="585" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.webp"><img alt="Portfolio Image 5" loading="lazy" src="images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.webp" width="1600" height="900" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.webp"><img alt="Portfolio Image 6" loading="lazy" src="images/milestone/69b3e15a-9c80-4f70-9ec9-c22e965a1af1.JPG.webp" width="1040" height="585" decoding="async" /></a></div>
                                 </div>
                             </div>
                         </div>
@@ -2086,24 +2081,24 @@
                         <div class="row-2" style="margin-top: 20px;">
                             <div class="Milestone-scroll-track" id="msVideoGallery">
                                 <div class="Milestone-scroll-row">
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><img alt="Exhibition video 1" class="ms-vid-poster" data-src="videos/milestone/video_1.mp4" decoding="async" loading="lazy" src="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><img alt="Exhibition video 2" class="ms-vid-poster" data-src="videos/milestone/video_2.mp4" decoding="async" loading="lazy" src="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><img alt="Exhibition video 3" class="ms-vid-poster" data-src="videos/milestone/video_3.mp4" decoding="async" loading="lazy" src="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><img alt="Exhibition video 4" class="ms-vid-poster" data-src="videos/milestone/video_4.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2170.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><img alt="Exhibition video 5" class="ms-vid-poster" data-src="videos/milestone/video_5.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2171.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><img alt="Exhibition video 6" class="ms-vid-poster" data-src="videos/milestone/video_6.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2172.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><img alt="Exhibition video 7" class="ms-vid-poster" data-src="videos/milestone/video_7.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2418.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><img alt="Exhibition video 8" class="ms-vid-poster" data-src="videos/milestone/video_8.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2424.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><img alt="Exhibition video 1" class="ms-vid-poster" data-src="videos/milestone/video_1.mp4" decoding="async" loading="lazy" src="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><img alt="Exhibition video 2" class="ms-vid-poster" data-src="videos/milestone/video_2.mp4" decoding="async" loading="lazy" src="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.webp" width="900" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><img alt="Exhibition video 3" class="ms-vid-poster" data-src="videos/milestone/video_3.mp4" decoding="async" loading="lazy" src="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.webp" width="1040" height="585" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><img alt="Exhibition video 4" class="ms-vid-poster" data-src="videos/milestone/video_4.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2170.webp" width="1600" height="1350" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><img alt="Exhibition video 5" class="ms-vid-poster" data-src="videos/milestone/video_5.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2171.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><img alt="Exhibition video 6" class="ms-vid-poster" data-src="videos/milestone/video_6.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2172.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><img alt="Exhibition video 7" class="ms-vid-poster" data-src="videos/milestone/video_7.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2418.webp" width="1600" height="1200" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><img alt="Exhibition video 8" class="ms-vid-poster" data-src="videos/milestone/video_8.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2424.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
                                 </div>
                                 <div class="Milestone-scroll-row" aria-hidden="true">
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_1.mp4" decoding="async" loading="lazy" src="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_2.mp4" decoding="async" loading="lazy" src="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_3.mp4" decoding="async" loading="lazy" src="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_4.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2170.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_5.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2171.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_6.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2172.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_7.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2418.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_8.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2424.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_1.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_1.mp4" decoding="async" loading="lazy" src="images/milestone/75eb1f41-a4b9-4b2b-8305-f5e69482efad.JPG.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_2.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_2.mp4" decoding="async" loading="lazy" src="images/milestone/9BA3963E-7788-4A5C-A818-AFFF0939D312.JPG.webp" width="900" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_3.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_3.mp4" decoding="async" loading="lazy" src="images/milestone/bbf26b7c-6cab-499f-b7a4-23a01a97005a.JPG.webp" width="1040" height="585" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_4.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_4.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2170.webp" width="1600" height="1350" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_5.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_5.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2171.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_6.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_6.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2172.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_7.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_7.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2418.webp" width="1600" height="1200" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
+                                    <div class="gallery-card ms-vid-card"><a data-rel="lightcase" href="videos/milestone/video_8.mp4"><img alt="" class="ms-vid-poster" data-src="videos/milestone/video_8.mp4" decoding="async" loading="lazy" src="images/milestone/IMG_2424.webp" width="1200" height="1600" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -2111,20 +2106,20 @@
                         <div class="row-3" style="margin-top: 20px;">
                             <div class="Milestone-scroll-track">
                                 <div class="Milestone-scroll-row">
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2424.jpg"><img alt="Portfolio Image 14" loading="lazy" src="images/milestone/IMG_2424.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2425.jpg"><img alt="Portfolio Image 15" loading="lazy" src="images/milestone/IMG_2425.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2426.jpg"><img alt="Portfolio Image 16" loading="lazy" src="images/milestone/IMG_2426.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_7628.jpg"><img alt="Portfolio Image 17" loading="lazy" src="images/milestone/IMG_7628.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9103.jpg"><img alt="Portfolio Image 18" loading="lazy" src="images/milestone/IMG_9103.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9378.jpg"><img alt="Portfolio Image 19" loading="lazy" src="images/milestone/IMG_9378.jpg" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2424.webp"><img alt="Portfolio Image 14" loading="lazy" src="images/milestone/IMG_2424.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2425.webp"><img alt="Portfolio Image 15" loading="lazy" src="images/milestone/IMG_2425.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2426.webp"><img alt="Portfolio Image 16" loading="lazy" src="images/milestone/IMG_2426.webp" width="1600" height="1200" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_7628.webp"><img alt="Portfolio Image 17" loading="lazy" src="images/milestone/IMG_7628.webp" width="1600" height="1200" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9103.webp"><img alt="Portfolio Image 18" loading="lazy" src="images/milestone/IMG_9103.webp" width="1600" height="1200" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9378.webp"><img alt="Portfolio Image 19" loading="lazy" src="images/milestone/IMG_9378.webp" width="1200" height="1600" decoding="async" /></a></div>
                                 </div>
                                 <div class="Milestone-scroll-row" aria-hidden="true">
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2424.jpg"><img alt="Portfolio Image 14" loading="lazy" src="images/milestone/IMG_2424.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2425.jpg"><img alt="Portfolio Image 15" loading="lazy" src="images/milestone/IMG_2425.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2426.jpg"><img alt="Portfolio Image 16" loading="lazy" src="images/milestone/IMG_2426.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_7628.jpg"><img alt="Portfolio Image 17" loading="lazy" src="images/milestone/IMG_7628.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9103.jpg"><img alt="Portfolio Image 18" loading="lazy" src="images/milestone/IMG_9103.jpg" /></a></div>
-                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9378.jpg"><img alt="Portfolio Image 19" loading="lazy" src="images/milestone/IMG_9378.jpg" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2424.webp"><img alt="Portfolio Image 14" loading="lazy" src="images/milestone/IMG_2424.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2425.webp"><img alt="Portfolio Image 15" loading="lazy" src="images/milestone/IMG_2425.webp" width="1200" height="1600" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_2426.webp"><img alt="Portfolio Image 16" loading="lazy" src="images/milestone/IMG_2426.webp" width="1600" height="1200" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_7628.webp"><img alt="Portfolio Image 17" loading="lazy" src="images/milestone/IMG_7628.webp" width="1600" height="1200" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9103.webp"><img alt="Portfolio Image 18" loading="lazy" src="images/milestone/IMG_9103.webp" width="1600" height="1200" decoding="async" /></a></div>
+                                    <div class="gallery-card"><a data-rel="lightcase" href="images/milestone/IMG_9378.webp"><img alt="Portfolio Image 19" loading="lazy" src="images/milestone/IMG_9378.webp" width="1200" height="1600" decoding="async" /></a></div>
                                 </div>
                             </div>
                         </div>
@@ -2280,6 +2275,22 @@
                                         Address</h5>
                                     <p style="color: #333; font-size: 14px; margin: 0; line-height: 1.5;">Doddaramanna
                                         Circle, Nagasandra Post, Bengaluru 560073</p>
+                                </div>
+                            </div>
+                                                        <!-- WhatsApp -->
+                            <div class="contact-item"
+                                style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+                                <div
+                                    style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <i class="fab fa-whatsapp" style="color: #25D366; font-size: 20px;"></i>
+                                </div>
+                                <div>
+                                    <h5
+                                        style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin: 0 0 6px 0; font-weight: 600;">
+                                        WhatsApp</h5>
+                                    <a href="https://wa.me/919999404645" target="_blank"
+                                        style="color: #333; font-size: 14px; display: block; transition: color 0.3s; text-decoration: none;">+91
+                                        99994 04645</a>
                                 </div>
                             </div>
                             <!-- Social Media -->
@@ -2581,9 +2592,9 @@
                 <div class="iqra-faq-image-col">
                     <div class="iqra-faq-img-wrap">
                         <img
-                            src="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.jpeg"
+                            src="images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.webp"
                             alt="IQRA Interiors & Exhibitions – exhibition stall showcase"
-                            loading="lazy"
+                            loading="lazy" width="1200" height="1600" decoding="async"
                         />
                         <div class="iqra-faq-img-badge">
                             <span class="badge-num">150+</span>
@@ -2938,17 +2949,22 @@
                             <div class="footer-widget about-widget">
                                 <div class="widget-content">
                                     <div class="logo"><a href="#home"> <img alt="Milestone Exhibition studio Logo"
-                                                src="images/milestone/FullLogo_Transparent_NoBuffer.png"
-                                                style="width:200px; max-width:none; height:auto; filter:brightness(0) invert(1); transform:scale(2.2); transform-origin:left center; margin-bottom: 20px;" /></a>
+                                                src="images/milestone/FullLogo_Transparent_NoBuffer.webp"
+                                                style="width:200px; max-width:none; height:auto; filter:brightness(0) invert(1); transform:scale(2.2); transform-origin:left center; margin-bottom: 20px;" width="640" height="462" loading="eager" decoding="async" /></a>
                                     </div>
                                     <div class="text">Milestone Exhibition studio specializes in premium exhibition stall
                                         design,
                                         fabrication,
                                         and turnkey installation across India. Trusted by leading brands.</div>
-                                    <div class="email-box">
+                                                                        <div class="email-box" style="display: flex; flex-direction: column; gap: 8px;">
                                         <a href="tel:+919999404645"
-                                            style="display: block; margin-bottom: 5px; color: #ffffff;">+91 99994
-                                            04645</a>
+                                            style="display: flex; align-items: center; gap: 10px; color: #ffffff; text-decoration: none;">
+                                            <i class="fas fa-phone" style="font-size: 14px;"></i> +91 99994 04645
+                                        </a>
+                                        <a href="https://wa.me/919999404645" target="_blank"
+                                            style="display: flex; align-items: center; gap: 10px; color: #ffffff; text-decoration: none;">
+                                            <i class="fab fa-whatsapp" style="color: #25D366; font-size: 16px;"></i> Chat on WhatsApp
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -3007,6 +3023,89 @@
         </svg>
     </div>
     <!-- back to top end -->
+    <!-- back to top end -->
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919999404645" class="whatsapp-float-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <style>
+        .whatsapp-float-btn {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px; /* Moved up to sit above the 60px back-to-top button */
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float-btn:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        .whatsapp-tooltip {
+            visibility: hidden;
+            width: 100px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            font-family: sans-serif;
+            pointer-events: none;
+        }
+
+        .whatsapp-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 25px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .whatsapp-float-btn:hover .whatsapp-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float-btn {
+                width: 60px; /* Matching the back-to-top button size */
+                height: 60px;
+                bottom: 110px; /* Aligned vertically above */
+                right: 40px; /* Matching back-to-top right position */
+                font-size: 30px;
+            }
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+
     <script defer="" src="js/jquery.js"></script>
     <script defer="" src="js/popper.min.js"></script>
     <script defer="" src="js/bootstrap.min.js"></script>
@@ -3030,8 +3129,8 @@
             if (!heroMobileBg) return;
 
             var heroMobileImages = [
-                'images/milestone/IMG_2170.jpg',
-                'images/milestone/IMG_2171.jpg'
+                'images/milestone/IMG_2170.webp',
+                'images/milestone/IMG_2171.webp'
             ];
 
             var currentHeroImageIndex = 0;
@@ -3090,11 +3189,11 @@
             if (!mobileImage) return;
 
             var mobileImages = [
-                'images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.jpeg',
-                'images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.jpeg',
-                'images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.jpeg',
-                'images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.jpeg',
-                'images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.jpeg'
+                'images/milestone/0a793780-d2b2-4d28-862f-48db9c638bf0.JPG.webp',
+                'images/milestone/1c188cea-56ab-4da9-8665-59d8c6cb2d0b.JPG.webp',
+                'images/milestone/209df5e8-75f4-419c-a898-368796206d2d.JPG.webp',
+                'images/milestone/31330bbb-c3ce-4851-8692-b026ae80a8c7.JPG.webp',
+                'images/milestone/364F5428-5D7C-4F6C-8D2C-F14E6ACB5CE6.JPG.webp'
             ];
 
             var currentIndex = 0;
@@ -3294,6 +3393,4 @@
     </script>
     <!-- ===== END PERFORMANCE ===== -->
 </body>
-</head>
-
 </html>
