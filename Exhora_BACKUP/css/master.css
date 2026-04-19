@@ -10562,6 +10562,10 @@ height: 700px;
   }
 }
 
+.about-section-two .image-column .inner-column .image.two {
+  width: 85%;
+  align-self: flex-end;
+}
 @media (max-width: 1399.98px) {
   .about-section-two .image-column .inner-column .image.two {
     display: none;
