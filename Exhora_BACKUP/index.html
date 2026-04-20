@@ -2213,7 +2213,9 @@
                     box-sizing: border-box;
                     padding: 0 4px;
                     height: 100%;
-                    overflow-y: hidden;
+                    overflow-y: auto;
+                    /* contain: slide scrolls internally but never chains up to the page */
+                    overscroll-behavior-y: contain;
                     scrollbar-width: none;
                 }
 
