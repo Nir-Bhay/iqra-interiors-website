@@ -2263,6 +2263,39 @@
                         display: block;
                     }
 
+                    /* 3-column machine grid inside mobile stack */
+                    .ms-mobile-stack .ms-machines-inner-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 10px;
+                    }
+
+                    /* Tighten machine cards for 3-col layout */
+                    .ms-mobile-stack .ms-machine-card {
+                        padding: 10px 8px;
+                        gap: 8px;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        border-radius: 10px;
+                    }
+
+                    .ms-mobile-stack .ms-machine-icon {
+                        width: 36px;
+                        height: 36px;
+                        font-size: 16px;
+                        border-radius: 8px;
+                        flex-shrink: 0;
+                    }
+
+                    .ms-mobile-stack .ms-machine-info h4 {
+                        font-size: 11px;
+                        line-height: 1.3;
+                    }
+
+                    .ms-mobile-stack .ms-machine-info p {
+                        font-size: 10px;
+                    }
+
                     /* Mobile card grid = single column */
                     .ms-services-grid {
                         grid-template-columns: 1fr;
@@ -2587,7 +2620,7 @@
 
                     <!-- Group 1: Core Services -->
                     <div class="ms-mobile-group">
-                        <div class="ms-group-label"><i class="icon fas fa-star"></i> Core Services</div>
+
                         <div class="ms-services-grid">
                             <div class="ms-light-card">
                                 <div class="ms-card-icon"><i class="icon fas fa-pencil-ruler"></i></div>
@@ -2630,7 +2663,7 @@
 
                     <!-- Group 2: Complete Fabrication -->
                     <div class="ms-mobile-group">
-                        <div class="ms-group-label"><i class="icon fas fa-industry"></i> Complete Fabrication</div>
+
                         <div class="ms-cap-text-area" style="margin-bottom:20px;">
                             <h3>In-House Fabrication</h3>
                             <div class="ms-teal-rule"></div>
@@ -2672,7 +2705,7 @@
 
                     <!-- Group 3: Advertising & Signages -->
                     <div class="ms-mobile-group">
-                        <div class="ms-group-label"><i class="icon fas fa-ad"></i> Advertising &amp; Signages</div>
+
                         <div class="ms-cap-text-area" style="margin-bottom:20px;">
                             <h3>Advertising &amp; Signages</h3>
                             <div class="ms-teal-rule"></div>
