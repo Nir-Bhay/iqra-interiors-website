@@ -1016,8 +1016,8 @@
             -ms-overflow-style: none;
             -webkit-overflow-scrolling: touch;
             cursor: grab;
-            /* JS handles direction: none lets e.preventDefault() work on mobile */
-            touch-action: none;
+            /* pan-y: browser handles vertical page-scroll; JS handles horizontal drag */
+            touch-action: pan-y;
         }
         .Milestone-infinite-gallery .row-1::-webkit-scrollbar,
         .Milestone-infinite-gallery .row-2::-webkit-scrollbar,
@@ -2891,9 +2891,7 @@
 
                     function startAuto() {
                         clearInterval(autoTimer);
-                        autoTimer = setInterval(function () {
-                            if (!userTouching) goToSlide(currentSlide + 1);
-                        }, 4000);
+                        // AUTO-SLIDE DISABLED - carousel stays on current slide
                     }
 
                     document.addEventListener('touchstart', function () { userTouching = true; }, { passive: true });
@@ -2916,7 +2914,7 @@
 
                     function init() {
                         if (window.innerWidth <= 767) {
-                            startAuto();
+                            // auto-slide disabled per user request
                         } else {
                             clearInterval(autoTimer);
                         }
@@ -5184,12 +5182,12 @@
 
                         if (isHorizontal) {
                             // Horizontal swipe: scroll the gallery row, block page scroll
-                            e.preventDefault();
+                            // pan-y CSS handles vertical; just scroll horizontally
                             row.scrollLeft = touchStartScroll - dx;
                             touchMoved = true;
                         }
-                        // Vertical: do nothing — browser handles page scroll naturally
-                    }, { passive: false });
+                        // Vertical: pan-y CSS lets browser scroll the page naturally
+                    }, { passive: true });
 
                     row.addEventListener('touchend', function () {
                         track.style.animationPlayState = '';
