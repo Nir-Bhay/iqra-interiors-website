@@ -1841,16 +1841,16 @@
         <!-- End About Section Two -->
         <style>
             .about-image-mobile-slider {
-                display: none;
+                display: none !important;
             }
 
             @media (max-width: 767px) {
                 .about-image-desktop-primary {
-                    display: none !important;
+                    display: block;
                 }
 
                 .about-image-mobile-slider {
-                    display: block;
+                    display: none !important;
                 }
             }
         </style>
@@ -4686,64 +4686,7 @@
             });
         })();
 
-        (function () {
-            var mobileImage = document.getElementById('aboutMobileSliderImage');
-            if (!mobileImage) return;
 
-            var mobileImages = [
-                'https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1776695501/iqra-interiors/milestone/images/0a793780.webp',
-                'https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1776695511/iqra-interiors/milestone/images/1c188cea.webp',
-                'https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1776695517/iqra-interiors/milestone/images/209df5e8.webp',
-                'https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1776695522/iqra-interiors/milestone/images/31330bbb.webp',
-                'https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1776695528/iqra-interiors/milestone/images/364F5428.webp'
-            ];
-
-            var currentIndex = 0;
-            var intervalId = null;
-            var mobileQuery = window.matchMedia('(max-width: 767px)');
-
-            function showNextImage() {
-                currentIndex = (currentIndex + 1) % mobileImages.length;
-                mobileImage.src = mobileImages[currentIndex];
-            }
-
-            function startSlider() {
-                if (intervalId || !mobileQuery.matches || mobileImages.length < 2) return;
-                intervalId = setInterval(showNextImage, 2500);
-            }
-
-            function stopSlider() {
-                if (!intervalId) return;
-                clearInterval(intervalId);
-                intervalId = null;
-            }
-
-            function handleViewportChange() {
-                if (mobileQuery.matches) {
-                    currentIndex = 0;
-                    mobileImage.src = mobileImages[currentIndex];
-                    startSlider();
-                } else {
-                    stopSlider();
-                }
-            }
-
-            handleViewportChange();
-
-            if (mobileQuery.addEventListener) {
-                mobileQuery.addEventListener('change', handleViewportChange);
-            } else if (mobileQuery.addListener) {
-                mobileQuery.addListener(handleViewportChange);
-            }
-
-            document.addEventListener('visibilitychange', function () {
-                if (document.hidden) {
-                    stopSlider();
-                } else {
-                    handleViewportChange();
-                }
-            });
-        })();
 
         // First-Visit Popup Logic
         (function () {
