@@ -2200,7 +2200,7 @@
                     height: 800px;
                     /* FIX 1: prevent carousel scroll from triggering page scroll */
                     touch-action: pan-x;
-                    overscroll-behavior-x: contain;
+                    overscroll-behavior: none;
                 }
 
                 .ms-mobile-carousel::-webkit-scrollbar {
@@ -2213,7 +2213,7 @@
                     box-sizing: border-box;
                     padding: 0 4px;
                     height: 100%;
-                    overflow-y: auto;
+                    overflow-y: hidden;
                     scrollbar-width: none;
                 }
 

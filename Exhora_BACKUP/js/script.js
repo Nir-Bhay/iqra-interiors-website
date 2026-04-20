@@ -730,16 +730,25 @@
 	}
 	initTextReveal();
 
-	gsap.to(".parallax-bg", {
-		yPercent: -50, // Moves the background up
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".parallax-section",
-			start: "top bottom",
-			end: "bottom top",
-			scrub: true
-		}
-	});
+	// Parallax background: animate each section independently
+	// Guard: only run when .parallax-bg elements actually exist on this page
+	if (document.querySelector('.parallax-bg')) {
+		document.querySelectorAll('.parallax-section').forEach(function(section) {
+			var bg = section.querySelector('.parallax-bg');
+			if (!bg) return;
+			gsap.to(bg, {
+				yPercent: -30,
+				ease: "none",
+				scrollTrigger: {
+					trigger: section,
+					start: "top bottom",
+					end: "bottom top",
+					scrub: true,
+					invalidateOnRefresh: true
+				}
+			});
+		});
+	}
 
 	if ($(".expand-section").length) {
 		gsap.to(".expand-section", {
