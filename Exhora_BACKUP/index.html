@@ -1016,9 +1016,9 @@
             -ms-overflow-style: none;
             -webkit-overflow-scrolling: touch;
             cursor: grab;
-            touch-action: pan-x;
+            /* JS handles direction: none lets e.preventDefault() work on mobile */
+            touch-action: none;
         }
-
         .Milestone-infinite-gallery .row-1::-webkit-scrollbar,
         .Milestone-infinite-gallery .row-2::-webkit-scrollbar,
         .Milestone-infinite-gallery .row-3::-webkit-scrollbar,
@@ -1026,6 +1026,16 @@
             display: none;
         }
 
+
+        /* Desktop/mouse: restore native horizontal pan to complement drag handler */
+        @media (hover: hover) and (pointer: fine) {
+            .Milestone-infinite-gallery .row-1,
+            .Milestone-infinite-gallery .row-2,
+            .Milestone-infinite-gallery .row-3,
+            .Milestone-infinite-gallery .row-4 {
+                touch-action: pan-x;
+            }
+        }
         .Milestone-scroll-track {
             display: flex;
             gap: 20px;
