@@ -1,0 +1,11 @@
+.bg-shell/
+.claude/
+.gsd/
+temp_workspace/
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
+*.zip
+*.mp4
+*.tar.gz

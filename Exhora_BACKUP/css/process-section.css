@@ -1,0 +1,92 @@
+/* ============================================================================
+   PROCESS SECTION STYLES - ORIGINAL WITH MINOR IMPROVEMENTS
+   Keep the original clean look with just subtle enhancement
+   ============================================================================ */
+
+/* Remove any step numbers that were added */
+.speaker-block-two .inner-box .step-number {
+  display: none;
+}
+
+/* Keep original overlay styling minimal */
+.speaker-block-two .inner-box .image-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.speaker-block-two:hover .inner-box .image-overlay {
+  opacity: 0.8;
+}
+
+/* Minimal image box styling */
+.speaker-block-two .inner-box .image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.speaker-block-two:hover .inner-box .image-box {
+  transform: translateY(-3px);
+}
+
+/* Image styling */
+.speaker-block-two .inner-box .image-box .image img {
+  transition: transform 0.3s ease;
+}
+
+.speaker-block-two:hover .inner-box .image-box .image img {
+  transform: scale(1.02);
+}
+
+/* Minimal content styling */
+.speaker-block-two .inner-box .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+/* Keep original typography */
+.speaker-block-two .inner-box .content .name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.speaker-block-two .inner-box .content .name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.speaker-block-two .inner-box .content .designation {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+
+/* Remove extra border effects */
+.speaker-block-two .inner-box::before {
+  display: none;
+}
+
+.speaker-block-two .inner-box .image-box::after {
+  display: none;
+}
+
+/* Keep original active state */
+.speaker-block-two .inner-box.active {
+  transform: scale(1.01);
+}
