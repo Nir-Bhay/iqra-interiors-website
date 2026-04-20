@@ -2181,78 +2181,33 @@
                     box-shadow: 0 14px 28px rgba(61, 207, 160, 0.4);
                 }
 
-                /* â”€â”€ MOBILE CAROUSEL (hidden on desktop) â”€â”€ */
-                .ms-mobile-carousel-wrap {
+                /* ── MOBILE STATIC STACKED LAYOUT ── */
+                .ms-mobile-stack {
                     display: none;
                 }
 
-                .ms-mobile-carousel {
-                    display: flex;
-                    overflow-x: scroll;
-                    overflow-y: hidden;
-                    scroll-snap-type: x mandatory;
-                    -webkit-overflow-scrolling: touch;
-                    scrollbar-width: none;
-                    gap: 0;
-                    width: 100%;
-                    align-items: stretch;
-                    /* makes children fit height */
-                    height: 800px;
-                    /* FIX 1: prevent carousel scroll from triggering page scroll */
-                    touch-action: pan-x;
-                    overscroll-behavior: none;
+                .ms-mobile-group {
+                    margin-bottom: 44px;
                 }
 
-                .ms-mobile-carousel::-webkit-scrollbar {
-                    display: none;
+                .ms-mobile-group:last-child {
+                    margin-bottom: 0;
                 }
 
-                .ms-mobile-slide {
-                    flex: 0 0 100%;
-                    scroll-snap-align: start;
-                    box-sizing: border-box;
-                    padding: 0 4px;
-                    height: 100%;
-                    overflow-y: auto;
-                    /* contain: slide scrolls internally but never chains up to the page */
-                    overscroll-behavior-y: contain;
-                    scrollbar-width: none;
-                }
-
-                .ms-mobile-slide::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .ms-mobile-slide-label {
-                    font-size: 13px;
-                    font-weight: 700;
+                .ms-group-label {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 11px;
+                    font-weight: 800;
                     color: #3DCFA0;
                     text-transform: uppercase;
-                    letter-spacing: 2px;
-                    margin-bottom: 16px;
-                    text-align: center;
-                }
-
-                /* Dots indicator */
-                .ms-carousel-dots {
-                    display: flex;
-                    justify-content: center;
-                    gap: 8px;
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                }
-
-                .ms-carousel-dot {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: rgba(61, 207, 160, 0.3);
-                    transition: background 0.3s ease, transform 0.3s ease;
-                }
-
-                .ms-carousel-dot.active {
-                    background: #3DCFA0;
-                    transform: scale(1.4);
+                    letter-spacing: 2.5px;
+                    margin-bottom: 18px;
+                    padding: 6px 14px;
+                    background: rgba(61, 207, 160, 0.08);
+                    border-radius: 30px;
+                    border: 1px solid rgba(61, 207, 160, 0.2);
                 }
 
                 /* â”€â”€ TABLET (991px) â”€â”€ */
@@ -2300,8 +2255,11 @@
                         display: none !important;
                     }
 
-                    /* Show mobile carousel */
+                    /* Hide old carousel, show new static stack */
                     .ms-mobile-carousel-wrap {
+                        display: none !important;
+                    }
+                    .ms-mobile-stack {
                         display: block;
                     }
 
@@ -2624,206 +2582,138 @@
                     </div>
                 </div>
 
-                <!-- ===== MOBILE ONLY: Auto-rotating Carousel ===== -->
-                <div class="ms-mobile-carousel-wrap">
-                    <div class="ms-mobile-carousel" id="msMobileCarousel">
+                <!-- ===== MOBILE ONLY: Static Stacked Layout ===== -->
+                <div class="ms-mobile-stack">
 
-                        <!-- Slide 1: Core Services -->
-                        <div class="ms-mobile-slide">
-                            <div class="ms-mobile-slide-label">Core Services</div>
-                            <div class="ms-services-grid">
-                                <div class="ms-light-card">
-                                    <div class="ms-card-icon"><i class="icon fas fa-pencil-ruler"></i></div>
-                                    <h3 class="ms-card-title">Custom Stall Design</h3>
-                                    <p class="ms-card-text">Tailor-made exhibition stalls crafted to reflect your
-                                        brand's unique identity.</p>
-                                    <a href="contact.html" class="ms-card-link">Learn More <i
-                                            class="icon fas fa-arrow-right"></i></a>
-                                </div>
-                                <div class="ms-light-card">
-                                    <div class="ms-card-icon"><i class="icon fas fa-tools"></i></div>
-                                    <h3 class="ms-card-title">Turnkey Solutions</h3>
-                                    <p class="ms-card-text">Seamless end-to-end execution, from concept to final
-                                        delivery.</p>
-                                    <a href="contact.html" class="ms-card-link">Learn More <i
-                                            class="icon fas fa-arrow-right"></i></a>
-                                </div>
-                                <div class="ms-light-card">
-                                    <div class="ms-card-icon"><i class="icon fas fa-lightbulb"></i></div>
-                                    <h3 class="ms-card-title">Brand Activations</h3>
-                                    <p class="ms-card-text">Engaging installations that captivate audiences and leave a
-                                        lasting impression.</p>
-                                    <a href="contact.html" class="ms-card-link">Learn More <i
-                                            class="icon fas fa-arrow-right"></i></a>
-                                </div>
-                                <div class="ms-light-card">
-                                    <div class="ms-card-icon"><i class="icon fas fa-drafting-compass"></i></div>
-                                    <h3 class="ms-card-title">3D Rendering</h3>
-                                    <p class="ms-card-text">Photorealistic previews before a single nail is driven.</p>
-                                    <a href="contact.html" class="ms-card-link">Learn More <i
-                                            class="icon fas fa-arrow-right"></i></a>
-                                </div>
-                                <div class="ms-light-card">
-                                    <div class="ms-card-icon"><i class="icon fas fa-truck"></i></div>
-                                    <h3 class="ms-card-title">Global Execution</h3>
-                                    <p class="ms-card-text">World-class builds delivered to prestigious trade shows
-                                        globally.</p>
-                                    <a href="contact.html" class="ms-card-link">Learn More <i
-                                            class="icon fas fa-arrow-right"></i></a>
-                                </div>
-                                <div class="ms-light-card">
-                                    <div class="ms-card-icon"><i class="icon fas fa-tasks"></i></div>
-                                    <h3 class="ms-card-title">On-Site Support</h3>
-                                    <p class="ms-card-text">Dedicated managers ensuring flawless installation and timely
-                                        dismantling.</p>
-                                    <a href="contact.html" class="ms-card-link">Learn More <i
-                                            class="icon fas fa-arrow-right"></i></a>
-                                </div>
+                    <!-- Group 1: Core Services -->
+                    <div class="ms-mobile-group">
+                        <div class="ms-group-label"><i class="icon fas fa-star"></i> Core Services</div>
+                        <div class="ms-services-grid">
+                            <div class="ms-light-card">
+                                <div class="ms-card-icon"><i class="icon fas fa-pencil-ruler"></i></div>
+                                <h3 class="ms-card-title">Custom Stall Design</h3>
+                                <p class="ms-card-text">Tailor-made exhibition stalls crafted to reflect your brand's unique identity.</p>
+                                <a href="contact.html" class="ms-card-link">Learn More <i class="icon fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="ms-light-card">
+                                <div class="ms-card-icon"><i class="icon fas fa-tools"></i></div>
+                                <h3 class="ms-card-title">Turnkey Solutions</h3>
+                                <p class="ms-card-text">Seamless end-to-end execution, from concept to final delivery.</p>
+                                <a href="contact.html" class="ms-card-link">Learn More <i class="icon fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="ms-light-card">
+                                <div class="ms-card-icon"><i class="icon fas fa-lightbulb"></i></div>
+                                <h3 class="ms-card-title">Brand Activations</h3>
+                                <p class="ms-card-text">Engaging installations that captivate audiences and leave a lasting impression.</p>
+                                <a href="contact.html" class="ms-card-link">Learn More <i class="icon fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="ms-light-card">
+                                <div class="ms-card-icon"><i class="icon fas fa-drafting-compass"></i></div>
+                                <h3 class="ms-card-title">3D Concept Rendering</h3>
+                                <p class="ms-card-text">Photorealistic previews before a single nail is driven.</p>
+                                <a href="contact.html" class="ms-card-link">Learn More <i class="icon fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="ms-light-card">
+                                <div class="ms-card-icon"><i class="icon fas fa-truck"></i></div>
+                                <h3 class="ms-card-title">Global Execution</h3>
+                                <p class="ms-card-text">World-class builds delivered to prestigious trade shows globally.</p>
+                                <a href="contact.html" class="ms-card-link">Learn More <i class="icon fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="ms-light-card">
+                                <div class="ms-card-icon"><i class="icon fas fa-tasks"></i></div>
+                                <h3 class="ms-card-title">On-Site Support</h3>
+                                <p class="ms-card-text">Dedicated managers ensuring flawless installation and timely dismantling.</p>
+                                <a href="contact.html" class="ms-card-link">Learn More <i class="icon fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-
-                        <!-- Slide 2: Complete Fabrication -->
-                        <div class="ms-mobile-slide">
-                            <div class="ms-mobile-slide-label">Complete Fabrication</div>
-                            <div class="ms-cap-text-area" style="margin-bottom:20px;">
-                                <h3>In-House Fabrication</h3>
-                                <div class="ms-teal-rule"></div>
-                                <p>Advanced machinery, full quality control, and precision for every project.</p>
-                                <ul class="ms-cap-checklist">
-                                    <li><i class="icon fas fa-check-circle"></i> UV printing setup in-house</li>
-                                    <li><i class="icon fas fa-check-circle"></i> Complete wooden setup with specialized
-                                        machinery</li>
-                                    <li><i class="icon fas fa-check-circle"></i> Complete metal works solutions</li>
-                                    <li><i class="icon fas fa-check-circle"></i> End-to-end quality assurance</li>
-                                </ul>
-                            </div>
-                            <div class="ms-machines-inner-grid">
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-print"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>UV Printing</h4>
-                                        <p>High-resolution</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-cogs"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>CNC Router</h4>
-                                        <p>Wood cutting</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-ruler-combined"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Panel Saw</h4>
-                                        <p>Large formats</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-border-all"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Edge Bending</h4>
-                                        <p>Finish lines</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-compress-arrows-alt"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Cold Press</h4>
-                                        <p>Laminations</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-hammer"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Metal Works</h4>
-                                        <p>Custom shaping</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 3: Advertising & Signages -->
-                        <div class="ms-mobile-slide">
-                            <div class="ms-mobile-slide-label">Advertising &amp; Signages</div>
-                            <div class="ms-cap-text-area" style="margin-bottom:20px;">
-                                <h3>Advertising &amp; Signages</h3>
-                                <div class="ms-teal-rule"></div>
-                                <p>From illuminated signs to vinyl graphics, we handle your brand's physical presence
-                                    end-to-end.</p>
-                                <ul class="ms-cap-checklist">
-                                    <li><i class="icon fas fa-check-circle"></i> In-house signage and graphic solutions
-                                    </li>
-                                    <li><i class="icon fas fa-check-circle"></i> Durable outdoor and indoor substrates
-                                    </li>
-                                    <li><i class="icon fas fa-check-circle"></i> Custom edge-lit acrylics and 3D letters
-                                    </li>
-                                    <li><i class="icon fas fa-check-circle"></i> Fast turnaround for large-format media
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ms-machines-inner-grid">
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-fill"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>UV 10ft Media</h4>
-                                        <p>Large format</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-scroll"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Roland Vinyl</h4>
-                                        <p>Roll prints</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-palette"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Colorjet Flex</h4>
-                                        <p>Flex banners</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-cut"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Laser Cut</h4>
-                                        <p>Acrylic precision</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-angle-double-right"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Alum. Bending</h4>
-                                        <p>Profile tools</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-font"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Liquid Letters</h4>
-                                        <p>3D branding</p>
-                                    </div>
-                                </div>
-                                <div class="ms-machine-card ms-machine-card-span">
-                                    <div class="ms-machine-icon"><i class="icon fas fa-vector-square"></i></div>
-                                    <div class="ms-machine-info">
-                                        <h4>Acrylic CNC Router</h4>
-                                        <p>Hard-plastic shaping</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div><!-- end ms-mobile-carousel -->
-
-                    <!-- Dots -->
-                    <div class="ms-carousel-dots" id="msCarouselDots">
-                        <div class="ms-carousel-dot active"></div>
-                        <div class="ms-carousel-dot"></div>
-                        <div class="ms-carousel-dot"></div>
                     </div>
-                </div><!-- end ms-mobile-carousel-wrap -->
+
+                    <!-- Group 2: Complete Fabrication -->
+                    <div class="ms-mobile-group">
+                        <div class="ms-group-label"><i class="icon fas fa-industry"></i> Complete Fabrication</div>
+                        <div class="ms-cap-text-area" style="margin-bottom:20px;">
+                            <h3>In-House Fabrication</h3>
+                            <div class="ms-teal-rule"></div>
+                            <p>Advanced machinery, full quality control, and precision for every project.</p>
+                            <ul class="ms-cap-checklist">
+                                <li><i class="icon fas fa-check-circle"></i> UV printing setup in-house</li>
+                                <li><i class="icon fas fa-check-circle"></i> Complete wooden setup with specialized machinery</li>
+                                <li><i class="icon fas fa-check-circle"></i> Complete metal works solutions</li>
+                                <li><i class="icon fas fa-check-circle"></i> End-to-end quality assurance</li>
+                            </ul>
+                        </div>
+                        <div class="ms-machines-inner-grid">
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-print"></i></div>
+                                <div class="ms-machine-info"><h4>UV Printing</h4><p>High-resolution setups</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-cogs"></i></div>
+                                <div class="ms-machine-info"><h4>CNC Router</h4><p>Precision wood cutting</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-ruler-combined"></i></div>
+                                <div class="ms-machine-info"><h4>Panel Saw</h4><p>Large formats</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-border-all"></i></div>
+                                <div class="ms-machine-info"><h4>Edge Bending</h4><p>Flawless finish lines</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-compress-arrows-alt"></i></div>
+                                <div class="ms-machine-info"><h4>Cold Press</h4><p>Strong laminations</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-hammer"></i></div>
+                                <div class="ms-machine-info"><h4>Metal Works</h4><p>Custom shaping</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Group 3: Advertising & Signages -->
+                    <div class="ms-mobile-group">
+                        <div class="ms-group-label"><i class="icon fas fa-ad"></i> Advertising &amp; Signages</div>
+                        <div class="ms-cap-text-area" style="margin-bottom:20px;">
+                            <h3>Advertising &amp; Signages</h3>
+                            <div class="ms-teal-rule"></div>
+                            <p>From illuminated signs to vinyl graphics, we handle your brand's physical presence end-to-end.</p>
+                            <ul class="ms-cap-checklist">
+                                <li><i class="icon fas fa-check-circle"></i> In-house signage and graphic solutions</li>
+                                <li><i class="icon fas fa-check-circle"></i> Durable outdoor and indoor substrates</li>
+                                <li><i class="icon fas fa-check-circle"></i> Custom edge-lit acrylics and 3D letters</li>
+                                <li><i class="icon fas fa-check-circle"></i> Fast turnaround for large-format media</li>
+                            </ul>
+                        </div>
+                        <div class="ms-machines-inner-grid">
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-fill"></i></div>
+                                <div class="ms-machine-info"><h4>UV 10ft Media</h4><p>Large format printing</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-scroll"></i></div>
+                                <div class="ms-machine-info"><h4>Roland Vinyl 5ft</h4><p>Crisp roll prints</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-palette"></i></div>
+                                <div class="ms-machine-info"><h4>Colorjet Iris Flex</h4><p>Vibrant flex banners</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-cut"></i></div>
+                                <div class="ms-machine-info"><h4>Laser Cut (8x4)</h4><p>Acrylic &amp; wood precision</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-angle-double-right"></i></div>
+                                <div class="ms-machine-info"><h4>Alum. Bending</h4><p>Profile bending tools</p></div>
+                            </div>
+                            <div class="ms-machine-card">
+                                <div class="ms-machine-icon"><i class="icon fas fa-font"></i></div>
+                                <div class="ms-machine-info"><h4>Liquid Letters</h4><p>Premium 3D branding</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end ms-mobile-stack -->
+
 
                 <div class="ms-cta-wrapper">
                     <a href="contact.html" class="ms-btn-primary">Discuss Your Project</a>
@@ -2870,60 +2760,7 @@
                     }
                 });
 
-                /* -- Mobile Carousel: auto-rotate + dots -- */
-                (function () {
-                    var carousel = document.getElementById('msMobileCarousel');
-                    var dots = document.querySelectorAll('#msCarouselDots .ms-carousel-dot');
-                    if (!carousel) return;
-                    var totalSlides = 3;
-                    var currentSlide = 0;
-                    var autoTimer = null;
-                    var userTouching = false;
 
-                    function goToSlide(idx) {
-                        if (idx >= totalSlides) idx = 0;
-                        if (idx < 0) idx = totalSlides - 1;
-                        currentSlide = idx;
-                        var slideWidth = carousel.offsetWidth;
-                        carousel.scrollLeft = slideWidth * idx;
-                        dots.forEach(function (d, i) {
-                            d.classList.toggle('active', i === idx);
-                        });
-                    }
-
-                    function startAuto() {
-                        clearInterval(autoTimer);
-                        // AUTO-SLIDE DISABLED - carousel stays on current slide
-                    }
-
-                    document.addEventListener('touchstart', function () { userTouching = true; }, { passive: true });
-                    document.addEventListener('touchend', function () { userTouching = false; }, { passive: true });
-                    document.addEventListener('touchcancel', function () { userTouching = false; }, { passive: true });
-
-                    carousel.addEventListener('touchstart', function () { clearInterval(autoTimer); }, { passive: true });
-                    carousel.addEventListener('touchend', function () {
-                        setTimeout(function () {
-                            var idx = Math.round(carousel.scrollLeft / carousel.offsetWidth);
-                            currentSlide = idx;
-                            dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
-                            startAuto();
-                        }, 350);
-                    }, { passive: true });
-
-                    dots.forEach(function (dot, i) {
-                        dot.addEventListener('click', function () { goToSlide(i); startAuto(); });
-                    });
-
-                    function init() {
-                        if (window.innerWidth <= 767) {
-                            // auto-slide disabled per user request
-                        } else {
-                            clearInterval(autoTimer);
-                        }
-                    }
-                    window.addEventListener('resize', init);
-                    window.addEventListener('load', init);
-                })();
             </script>
         </section>
         <!-- End Unified Feature Section -->
