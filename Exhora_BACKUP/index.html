@@ -2188,6 +2188,9 @@
                     align-items: stretch;
                     /* makes children fit height */
                     height: 800px;
+                    /* FIX 1: prevent carousel scroll from triggering page scroll */
+                    touch-action: pan-x;
+                    overscroll-behavior-x: contain;
                 }
 
                 .ms-mobile-carousel::-webkit-scrollbar {
@@ -2855,7 +2858,7 @@
                     }
                 });
 
-                /* â”€â”€ Mobile Carousel: auto-rotate + dots â”€â”€ */
+                /* -- Mobile Carousel: auto-rotate + dots -- */
                 (function () {
                     var carousel = document.getElementById('msMobileCarousel');
                     var dots = document.querySelectorAll('#msCarouselDots .ms-carousel-dot');
@@ -2863,13 +2866,14 @@
                     var totalSlides = 3;
                     var currentSlide = 0;
                     var autoTimer = null;
+                    var userTouching = false;
 
                     function goToSlide(idx) {
                         if (idx >= totalSlides) idx = 0;
                         if (idx < 0) idx = totalSlides - 1;
                         currentSlide = idx;
                         var slideWidth = carousel.offsetWidth;
-                        carousel.scrollTo({ left: slideWidth * idx, behavior: 'smooth' });
+                        carousel.scrollLeft = slideWidth * idx;
                         dots.forEach(function (d, i) {
                             d.classList.toggle('active', i === idx);
                         });
@@ -2878,14 +2882,16 @@
                     function startAuto() {
                         clearInterval(autoTimer);
                         autoTimer = setInterval(function () {
-                            goToSlide(currentSlide + 1);
+                            if (!userTouching) goToSlide(currentSlide + 1);
                         }, 4000);
                     }
 
-                    /* Pause on manual swipe */
+                    document.addEventListener('touchstart', function () { userTouching = true; }, { passive: true });
+                    document.addEventListener('touchend', function () { userTouching = false; }, { passive: true });
+                    document.addEventListener('touchcancel', function () { userTouching = false; }, { passive: true });
+
                     carousel.addEventListener('touchstart', function () { clearInterval(autoTimer); }, { passive: true });
                     carousel.addEventListener('touchend', function () {
-                        /* Snap-detect: read scroll position after gesture */
                         setTimeout(function () {
                             var idx = Math.round(carousel.scrollLeft / carousel.offsetWidth);
                             currentSlide = idx;
@@ -2894,12 +2900,10 @@
                         }, 350);
                     }, { passive: true });
 
-                    /* Dot click */
                     dots.forEach(function (dot, i) {
                         dot.addEventListener('click', function () { goToSlide(i); startAuto(); });
                     });
 
-                    /* Start only on mobile */
                     function init() {
                         if (window.innerWidth <= 767) {
                             startAuto();
@@ -5092,51 +5096,99 @@
         }());
 
         (function () {
+            var isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
             var rows = document.querySelectorAll('.Milestone-infinite-gallery .row-1, .Milestone-infinite-gallery .row-2, .Milestone-infinite-gallery .row-3, .Milestone-infinite-gallery .row-4');
             rows.forEach(function (row) {
                 var track = row.querySelector('.Milestone-scroll-track');
                 if (!track) return;
 
-                var dragging = false;
-                var startX = 0;
-                var startScroll = 0;
-                var moved = false;
+                /* ── DESKTOP: Mouse drag to scroll ── */
+                if (!isMobile) {
+                    var dragging = false;
+                    var startX = 0;
+                    var startScroll = 0;
+                    var moved = false;
 
-                row.addEventListener('pointerdown', function (e) {
-                    if (e.button !== 0) return;
-                    dragging = true;
-                    moved = false;
-                    startX = e.clientX;
-                    startScroll = row.scrollLeft;
-                    row.style.cursor = 'grabbing';
-                    track.style.animationPlayState = 'paused';
-                    row.setPointerCapture(e.pointerId);
-                });
-
-                row.addEventListener('pointermove', function (e) {
-                    if (!dragging) return;
-                    var delta = e.clientX - startX;
-                    if (Math.abs(delta) > 4) moved = true;
-                    row.scrollLeft = startScroll - delta;
-                });
-
-                function endDrag(e) {
-                    if (!dragging) return;
-                    dragging = false;
-                    row.style.cursor = 'grab';
-                    track.style.animationPlayState = '';
-                    try { row.releasePointerCapture(e.pointerId); } catch (err) { }
-                }
-
-                row.addEventListener('pointerup', endDrag);
-                row.addEventListener('pointercancel', endDrag);
-                row.addEventListener('mouseleave', endDrag);
-                row.addEventListener('click', function (e) {
-                    if (moved) {
-                        e.preventDefault();
-                        e.stopPropagation();
+                    row.addEventListener('pointerdown', function (e) {
+                        if (e.button !== 0) return;
+                        dragging = true;
+                        moved = false;
+                        startX = e.clientX;
+                        startScroll = row.scrollLeft;
+                        row.style.cursor = 'grabbing';
+                        track.style.animationPlayState = 'paused';
+                        row.setPointerCapture(e.pointerId);
+                    });
+                    row.addEventListener('pointermove', function (e) {
+                        if (!dragging) return;
+                        var delta = e.clientX - startX;
+                        if (Math.abs(delta) > 4) moved = true;
+                        row.scrollLeft = startScroll - delta;
+                    });
+                    function endDrag(e) {
+                        if (!dragging) return;
+                        dragging = false;
+                        row.style.cursor = 'grab';
+                        track.style.animationPlayState = '';
+                        try { row.releasePointerCapture(e.pointerId); } catch (err) { }
                     }
-                });
+                    row.addEventListener('pointerup', endDrag);
+                    row.addEventListener('pointercancel', endDrag);
+                    row.addEventListener('mouseleave', endDrag);
+                    row.addEventListener('click', function (e) {
+                        if (moved) { e.preventDefault(); e.stopPropagation(); }
+                    });
+                } else {
+                    /* ── MOBILE: Touch-aware drag that yields to vertical page scroll ── */
+                    // FIX 2 & 3: Only intercept clearly horizontal swipes.
+                    // If the user swipes more vertically than horizontally, let the
+                    // browser handle it as a normal page scroll — do not capture.
+                    var touchStartX = 0;
+                    var touchStartY = 0;
+                    var touchStartScroll = 0;
+                    var intentDecided = false;
+                    var isHorizontal = false;
+                    var touchMoved = false;
+
+                    row.addEventListener('touchstart', function (e) {
+                        var t = e.touches[0];
+                        touchStartX = t.clientX;
+                        touchStartY = t.clientY;
+                        touchStartScroll = row.scrollLeft;
+                        intentDecided = false;
+                        isHorizontal = false;
+                        touchMoved = false;
+                        track.style.animationPlayState = 'paused';
+                    }, { passive: true });
+
+                    row.addEventListener('touchmove', function (e) {
+                        var t = e.touches[0];
+                        var dx = t.clientX - touchStartX;
+                        var dy = t.clientY - touchStartY;
+
+                        if (!intentDecided && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
+                            // Decide once: horizontal or vertical?
+                            intentDecided = true;
+                            isHorizontal = Math.abs(dx) > Math.abs(dy);
+                        }
+
+                        if (isHorizontal) {
+                            // Horizontal swipe: scroll the gallery row, block page scroll
+                            e.preventDefault();
+                            row.scrollLeft = touchStartScroll - dx;
+                            touchMoved = true;
+                        }
+                        // Vertical: do nothing — browser handles page scroll naturally
+                    }, { passive: false });
+
+                    row.addEventListener('touchend', function () {
+                        track.style.animationPlayState = '';
+                    }, { passive: true });
+
+                    row.addEventListener('touchcancel', function () {
+                        track.style.animationPlayState = '';
+                    }, { passive: true });
+                }
             });
         }());
     </script>
