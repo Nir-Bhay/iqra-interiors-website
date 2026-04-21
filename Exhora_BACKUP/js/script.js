@@ -548,6 +548,14 @@
 		}
 		$(window).on('mousemove', moveCircle);
 		$("a, .clink").hover(hoverFunc, unhoverFunc);
+
+		// Use a solid cursor in sections with light backgrounds where blend mode hurts visibility.
+		$(document).on('mouseenter', '.testimonial-section-custom, .Milestone-Exhibition-studio-contact-section, .iqra-faq-section', function () {
+			$('body').addClass('cursor-solid');
+		});
+		$(document).on('mouseleave', '.testimonial-section-custom, .Milestone-Exhibition-studio-contact-section, .iqra-faq-section', function () {
+			$('body').removeClass('cursor-solid');
+		});
 	}
 
 	// Elements Animation
